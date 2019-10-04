@@ -25,7 +25,7 @@ background-color:  rgb(120,120,120);
 
 }
 
-.Place_Logo
+.logo
 {
 
     margin-left: 5px;
@@ -47,14 +47,11 @@ align-self: flex-end;
 #logoNom
 {
 
+display: flex;
+flex-direction: row;
+justify-content: center;
 
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
 }
-
-
-
 
 .titre
 {

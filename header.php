@@ -4,17 +4,15 @@
         <link rel="stylesheet" href="style.css">
 
 
-    <div id = "logoNom">
 
-    <img src="logo.jpg" class = "logo">
 
+    <div id="logoNom">
     <a href = 'index.php' class = "titre">PINEAPPLE</a>
-
-    <div class = "vide"></div>
-
-
+    <img src="logo.png" class = "logo"> 
     </div>
-    
+
+
+       
     <p>   
     <a href='productSearch.php' class ="menu"> Produits </a>      
     <a href='logUp.php' class ="menu"> Inscription  </a>
