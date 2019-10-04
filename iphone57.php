@@ -32,13 +32,15 @@
 
 	</form>
 
+	<?php include "testIndex.php";?>
+
 </body>
 
 
 
 <footer>
 	
-	<?php include "header.php";?>
+	<?php include "footer.php";?>
 
 </footer>
 

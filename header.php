@@ -1,10 +1,9 @@
-<head>
+
         <meta charset="iso-8859-1">
         <title>PINEAPPLE</title>
         <link rel="stylesheet" href="style.css">
-</head>
-<header>
-    <h1> PINEAPPLE</h1> 
+
+    <a href = 'index.php' class = 'menu'><h1> PINEAPPLE</h1></a>
     <marginleft>
         <p>
         <a href='productSearch.php'> Recherche de produits </a></p>
@@ -20,6 +19,6 @@
         </aside>
         <a href='Cart.php'>Panier </a>
     </right>
-</header>
+
         
 
