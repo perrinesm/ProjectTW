@@ -14,12 +14,13 @@ header
 background-color:  rgb(180,180,180);
 text-decoration: none;
 display: flex;
-flex-direction: row;
+flex-direction: column;
 padding-bottom: 10px;
 }
 
 footer
 {
+
 background-color:  rgb(120,120,120);
 
 }
@@ -35,22 +36,29 @@ background-color:  rgb(120,120,120);
 
 .menu{
 
-align-self: flex-end;
-
-padding-bottom: 10px;
-padding-top: 5px;
+font-size: 2em;
+font-family: Arial;
 color:black;
-font-size: 1em;
-
-
-
+margin-left: 0.5em;
+margin-right: 0.5em;
+align-self: flex-end;
 }
+
+#logoNom
+{
+
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+
 
 
 .titre
 {
 
-align-self: flex-start;
 padding-bottom: 10px;
 padding-top: 5px;
 color:white;
@@ -58,6 +66,7 @@ font-size: 4em;
 text-align: center;
 font-family: Arial;
 font-style: bold;
+
 }
 
 
