@@ -2,6 +2,7 @@
 
 <head>
 	
+<link rel="stylesheet" href="style.css">	
 
 </head>
 
@@ -31,8 +32,6 @@
     <input type="submit" class="Bouton" value="Ajouter au panier"/>
 
 	</form>
-
-	<?php include "testIndex.php";?>
 
 </body>
 

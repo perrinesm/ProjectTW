@@ -2,6 +2,7 @@
 
 <head>
 	
+<link rel="stylesheet" href="style.css">	
 
 </head>
 
@@ -17,7 +18,10 @@
 
 <body>
 
-	<a href = 'iphone57.php' class = 'menu'><p>Iphone 57</p></a>
+	<a href = 'phoneSearch.php' class = 'menu'><p>Phones</p></a>
+	<a href = 'padSearch.php' class = 'menu'><p>Pads</p></a>
+	<a href = 'computerSearch.php' class = 'menu'><p>Computers</p></a>
+	<a href = 'accessorySearch.php' class = 'menu'><p>Accessoires</p></a>
 
 </body>
 

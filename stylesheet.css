@@ -1,6 +1,7 @@
 *{
 margin:0;
 padding:0;
+
 }
 
 a:link 
@@ -9,8 +10,20 @@ text-decoration:none;
 }
 
 
+body{
+
+
+margin-bottom: 65px;
+
+
+}
+
+
 header
 {
+
+
+
 background-color:  rgb(180,180,180);
 text-decoration: none;
 display: flex;
@@ -18,10 +31,18 @@ flex-direction: column;
 padding-bottom: 10px;
 }
 
+
+
 footer
 {
 
 background-color:  rgb(120,120,120);
+position: fixed;
+bottom:0;
+width:100%;
+padding-top:5px;
+padding-bottom:5px;
+height:20px;
 
 }
 
@@ -53,13 +74,20 @@ justify-content: center;
 
 }
 
+.logo{
+
+	width: 85px;
+	height: 85px;
+	padding-top: 12px;
+}
+
 .titre
 {
 
 padding-bottom: 10px;
 padding-top: 5px;
 color:white;
-font-size: 4em;
+font-size: 100px;
 text-align: center;
 font-family: Arial;
 font-style: bold;
@@ -69,7 +97,9 @@ font-style: bold;
 
 .contact
 {
-
-	justify-content: center;
-
+	font-size: 1em;
+	font-family: Arial;
+	color:black;	
+	text-align: center;
+	font-style: bold;
 }

@@ -1,7 +1,7 @@
 
 <link rel="stylesheet" href="stylesheet.css">
 
-<p class = "contact">Contactez nous</p>
+<a href="mailto:antoine.genonceau@isen.yncrea.fr"> <p class = "contact">Contactez nous</p></a>
 
 
 

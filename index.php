@@ -1,7 +1,8 @@
 <html>
-
+<div id = "all">
 <head>
-	
+
+<link rel="stylesheet" href="style.css">	
 
 </head>
 
@@ -16,7 +17,7 @@
 
 <body>
 	
-	<p>Bienvenue !<p>
+	<p>Bienvenue !</p>
 
 </body>
 
@@ -28,5 +29,5 @@
 
 </footer>
 
-
+</div>
 </html>
