@@ -1,8 +1,11 @@
+<!DOCTYPE html>
+
 <html>
 <div id = "all">
 <head>
 
 <link rel="stylesheet" href="style.css">	
+<link rel="icon" type="image/png" href="icon.png" />
 
 </head>
 
