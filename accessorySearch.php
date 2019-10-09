@@ -19,7 +19,7 @@
 
 <body>
 
-	Nous n'avons pas encore d'accessoires.
+	Nous n'avons pas encore d'accessoire.
 
 </body>
 

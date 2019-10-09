@@ -18,9 +18,9 @@
 
 <body>
 	
-	Votre panier est vide car notre site est en développement !
+	Votre panier est vide car notre site est en cours de développement !
 
-	<a href = 'index.php' class = 'menu'><p>Retour à l'acceuil</p></a>
+	<a href = 'index.php' class = 'menu'><p>Retour à l'accueil</p></a>
 
 </body>
 

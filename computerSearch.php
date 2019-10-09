@@ -19,7 +19,7 @@
 
 <body>
 
-	Nous n'avons pas encore de computer.
+	Nous n'avons pas encore d'ordinateur.
 
 </body>
 
