@@ -28,7 +28,7 @@
                 <strong>Mémoire graphique :</strong> 16.0 Go <br />
             </p>
             <form> 
-                <input style="background-color: blue; margin-left: 620px; height: 60px" type="button" value=" Ajouter au Panier" onclick="alert('Produit ajouté !')">
+                <input class="button" type="button" value=" Ajouter au Panier" onclick="alert('Produit ajouté !')">
             </form>
         </div>
 

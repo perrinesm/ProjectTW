@@ -94,21 +94,21 @@ align-self: flex-end;
 
 .menuCart{
 
-
-font-size: 2em;
-font-family: Arial;
-color:black;
 float:right;
 position: relative;
 right: 20px;
-
-
-
-
-
-
-
-
+}
+.logoCart{
+width:55px;
+height:55px;
+}
+.button{
+    background-color: rgb(83, 135, 88); 
+    float:right;
+    height: 60px;
+    width:60px;
+    position: relative;
+    right: 20px;
 }
 
 #logoNom
