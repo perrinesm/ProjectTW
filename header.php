@@ -2,7 +2,6 @@
         <meta charset="iso-8859-1">
         <title>PINEAPPLE</title>
         <link rel="stylesheet" href="style.css">
-        
 
 
 
