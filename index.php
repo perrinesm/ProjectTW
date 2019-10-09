@@ -19,9 +19,11 @@
 </header>
 
 <body>
+	<section>
 		<center>
 			<h1> Bienvenue ! </h1>
 		</center>
+	</section>
 </body>
 
 
