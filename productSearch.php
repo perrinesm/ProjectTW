@@ -19,10 +19,10 @@
 
 <body>
 
-	<a href = 'phoneSearch.php' class = 'menu'><p>Téléphone</p></a>
-	<a href = 'padSearch.php' class = 'menu'><p>Tablette</p></a>
-	<a href = 'computerSearch.php' class = 'menu'><p>Ordinateur</p></a>
-	<a href = 'accessorySearch.php' class = 'menu'><p>Accessoire</p></a>
+	<a href = 'phoneSearch.php' class = 'menu'><p> Téléphone </p></a>
+	<a href = 'padSearch.php' class = 'menu'><p> Tablette </p></a>
+	<a href = 'computerSearch.php' class = 'menu'><p> Ordinateur </p></a>
+	<a href = 'accessorySearch.php' class = 'menu'><p> Accessoire </p></a>
 
 </body>
 
