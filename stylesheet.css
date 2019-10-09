@@ -59,6 +59,14 @@ margin-left: 0.5em;
 margin-right: 0.5em;
 align-self: flex-end;
 }
+.menu2{
+	float:right;
+	font-size: 2em;
+	font-family: Arial;
+	color:black;
+	position: relative;
+	right: 20px;
+}
 
 #logoNom
 {
