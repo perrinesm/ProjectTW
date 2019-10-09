@@ -12,7 +12,7 @@
         ?>
     </header>
     <body  style="display: flex; flex-direction: column;">
-        <h2 style="margin-left: 90px;"> - Ordinateurs </h2>
+        <h2 style="margin-left: 90px;">  Ordinateurs </h2>
 
             <div class = "product">  
                 <h4>  <a href="ordiA1.php"> MacPin Pro </a></h4>

@@ -83,7 +83,6 @@ height:20px;
 }
 
 .menu{
-
 font-size: 2em;
 font-family: Arial;
 color:black;
@@ -93,7 +92,6 @@ align-self: flex-end;
 }
 
 .menuCart{
-
 float:right;
 position: relative;
 right: 20px;

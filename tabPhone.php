@@ -14,7 +14,7 @@
 
 
     <body  style = "display: flex; flex-direction: column;">
-        <h2 style="margin-left: 90px;"> - Phones </h2>
+        <h2 style="margin-left: 90px;">  Téléphones </h2>
 
         <div class = 'product'>  
             <h4 > <a href="telA1.php">  Pinphone XS </a> </h4>

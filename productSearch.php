@@ -18,11 +18,10 @@
 </header>
 
 <body>
-
-	<a href = 'tabPhone.php' class = 'menu'><p> Téléphone </p></a>
-	<a href = 'tabTab.php' class = 'menu'><p> Tablette </p></a>
-	<a href = 'tabOrdi.php' class = 'menu'><p> Ordinateur </p></a>
-	<a href = 'tabAcc.php' class = 'menu'><p> Accessoire </p></a>
+	<a href = 'tabPhone.php' class = "menu" ><p style="margin-left: 90px;">  Téléphones </p></a>
+	<a href = 'tabTab.php' class = "menu"><p style="margin-left: 90px;"> Tablettes </p></a>
+	<a href = 'tabOrdi.php' class = "menu" ><p style="margin-left: 90px;"> Ordinateurs </p></a>
+	<a href = 'tabAcc.php' class = "menu" ><p style="margin-left: 90px;"> Accessoires </p></a>
 
 </body>
 

@@ -12,7 +12,7 @@
     </header>
 
     <body  style="display: flex; flex-direction: column;">
-        <h2> - Tablettes </h2>
+        <h2 style="margin-left: 90px;">  Tablettes </h2>
 
         <div class = 'product'>  
             <h4 style="margin-top: 5px;"> <a href="tabA1.php"> PinPad Pro </a></h4>

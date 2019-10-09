@@ -13,7 +13,7 @@
     </header>
 
     <body  style="display: flex; flex-direction: column;">
-        <h2> - Accessoires </h2>
+        <h2 style="margin-left: 90px;">   Accessoires </h2>
 
         <div class = 'product'>  
             <h4> Ecouteurs </h4>
