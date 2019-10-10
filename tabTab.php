@@ -28,17 +28,30 @@
                 </tr></thead>
                 <tbody><tr>
                     <td ><p> <img src="tabA1.png" /> </p></td>
-                    <td><p class="description"> Meilleure tablette du marché Il est tout nouveau, tout écran, tout puissant. <br >Il renferme nos technologies les plus avancées dans un design complètement réinventé.. <br >Waterproof .</p></td>
-                    <td align="center"><p> 659,99€ </p></td>
+                    <td><p class="description"> Meilleure tablette du marché.Une technologie est toute nouvelle, tout écran, toute puissante. <br >Elle renferme nos technologies les plus avancées dans un design complètement réinventé.. <br >Waterproof .</p></td>
+                    <td align="center"><p> 899,99€ </p></td>
                 </tr></tbody>
             </table> 
       </div>
 
         <div class = 'product'>
-            <h4> <a href="tabA2.php"> PinSmart </a> </h4>
-            <p> <img src="tabA2.png" /> </p>
-            <p class="description"> <em><strong>Description </strong> </em><center><em><strong> Prix  </strong> </em></center></p>
-            <p><center>25,99€ </center></p>
+        <style>
+                table{
+                   border-collapse:collapse;}
+                    
+            </style>
+            <table width="75%">
+                <thead><tr>
+                    <th align="left"> <h4> <a href="tabA2.php"> PinSmart </a> </h4></th>
+                    <th align="left"><p class="description"><em><strong> Description </strong></em></p></th>
+                    <th align="center"><em><strong> Prix  </strong> </em></th>
+                </tr></thead>
+                <tbody><tr>
+                    <td ><p> <img src="tabA2.png" /> </p></td>
+                    <td><p class="description"> <br >Conçu et testé par Pineapple la tablette PinSmart dispose d'un processeur quadricoeur plus rapide. <br/>Batterie offrant jusqu'à 24h d'autonomie. <br >Naviguez sur Internet, regardez des films, un grand divertissement jour après jour. <br >Waterproof .</p></td>
+                    <td align="center"><p> 459,99€ </p></td>
+                </tr></tbody>
+            </table>
         </div>
 
 
