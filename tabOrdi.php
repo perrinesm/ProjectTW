@@ -49,7 +49,7 @@
                     </tr></thead>
                     <tbody><tr>
                         <td><p> <img src="ordiA2.png" /> </p></td>
-                        <td><p class="description"> à compléter ;;;;;;;;;;;;;;;;;;;;;;;;;;;;LLLLLLLLLLLLLLLLLLL LLLL?KKKKKKKKKKKKKKKK <br >idem <br /><br /> idem</p></td>
+                        <td><p class="description"> à compléter  <br >idem <br /><br /> idem</p></td>
                         <td align="center"><p> 25,99€ </p></td>
                     </tr></tbody>
                 </table>
