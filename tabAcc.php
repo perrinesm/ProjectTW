@@ -38,7 +38,7 @@
         <div class = 'product'>  
             <h4> Chargeur </h4>
             <p> <img src="load.jpg" /> </p>
-            <p class="description"><em><strong>  Description </strong> </em></p>
+            <p class="description"><em><strong>  Description </strong> </em> <center><em><strong> Prix  </strong> </em></center></p>
             <p class="description"> </p>
             
             <form> 
