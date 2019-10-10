@@ -28,10 +28,10 @@
                     <th align="center"><em><strong> Prix  </strong> </em></th>
                 </tr></thead>
                 <tbody><tr>
-                    <td ><p> <img src="ecouteur.jpg"/> </p></td>
-                    <td><p class="description">à compléter text pas long sinon pb </p></td>
-                    <td align="center"><p> 25,99€ </p></td>
-                    <td align="left"><p><form> 
+                    <td width="15%"><p> <img src="ecouteur.jpg"/> </p></td>
+                    <td width="45%"><p class="description">Son Pure Bass, puissant. <br >Maintenant, vous pouvez même l’emporter avec vous. <br > Découvrez les écouteurs T205 Pineapple au son Pineapple Pure Bass.<br > Ils sont légers. </p></td>
+                    <td align="center" width="15%"><p> 34,99€ </p></td>
+                    <td align="right" width="25%"><p><form> 
                         <input class="button" type="button" value=" Ajouter au Panier" onclick="alert('Produit ajouté !')">
                     </form></p></td>
                 </tr></tbody>
@@ -39,35 +39,70 @@
             
         </div>
 
-        <div class = 'product'>  
-            <h4> Etui tablette </h4>
-            <p> <img src="etui.jpg" /> </p>
-            <p class="description"> <em><strong> Description</strong> </em> <center><em><strong> Prix  </strong> </em></center></p>
-            <p class="description"> <center>25,99€ </center></p>
-            <form> 
-                <input class="button" type="button" value=" Ajouter au Panier" onclick="alert('Produit ajouté !')">
-            </form>
+        <div class = 'product'> 
+            <style>
+                table{
+                    border-collapse:collapse;}  
+            </style>
+            <table width="100%">
+                <thead><tr>
+                    <th align="left"><h4> Etui tablette </h4></th>
+                    <th align="left"><p class="description"><em><strong> Description </strong> </p></th>
+                    <th align="center"><em><strong> Prix  </strong> </em></th>
+                </tr></thead>
+                <tbody><tr>
+                    <td width="15%"><p> <img src="etui.jpg"/> </p></td>
+                    <td width="45%"><p class="description">Etui compatible avec toutes les tablettes Pineapple. <br > Entièrement en cuir. <br >  Waterproof. </p></td>
+                    <td align="center" width="15%"><p> 19,99€ </p></td>
+                    <td align="right" width="25%"><p><form> 
+                        <input class="button" type="button" value=" Ajouter au Panier" onclick="alert('Produit ajouté !')">
+                    </form></p></td>
+                </tr></tbody>
+            </table>
         </div>
 
-        <div class = 'product'>  
-            <h4> Chargeur </h4>
-            <p> <img src="load.jpg" /> </p>
-            <p class="description"><em><strong>  Description </strong> </em> <center><em><strong> Prix  </strong> </em></center></p>
-            <p class="description"> <center>25,99€ </center></p>
-            
-            <form> 
-                <input class="button" type="button" value=" Ajouter au Panier" onclick="alert('Produit ajouté !')">
-            </form>
+        <div class = 'product'> 
+            <style>
+                table{
+                    border-collapse:collapse;}  
+            </style>
+            <table width="100%">
+                <thead><tr>
+                    <th align="left"><h4>  Chargeur  </h4></th>
+                    <th align="left"><p class="description"><em><strong> Description </strong> </p></th>
+                    <th align="center"><em><strong> Prix  </strong> </em></th>
+                </tr></thead>
+                <tbody><tr>
+                    <td width="15%"><p> <img src="load.jpg"/> </p></td>
+                    <td width="45%"><p class="description">Chargeur Secteur 1A + cable USB, connecteur lightning.  <br > Rechargez facilement vos appareils disposant d'une entree Pineapple Lightning (PinPhone pro, PinPod, ..). <br >  Cable lightning inclus, longueur 0,90 cm.<br >Etui compatible avec toutes les tablettes Pineapple.  </p></td>
+                    <td align="center" width="15%"><p> 9,99€ </p></td>
+                    <td align="right" width="25%"><p><form> 
+                        <input class="button" type="button" value=" Ajouter au Panier" onclick="alert('Produit ajouté !')">
+                    </form></p></td>
+                </tr></tbody>
+            </table>
         </div>
 
-        <div class = 'product'>  
-            <h4> Clavier Bluetooth </h4>
-            <p> <img src="clavier.png" /> </p>
-            <p class="description"> <em> <strong> Description</strong>  </em><center><em><strong> Prix  </strong> </em></center></p>
-            <p class="description"><center>25,99€ </center> </p>
-            <form> 
-                <input class="button" type="button" value=" Ajouter au Panier" onclick="alert('Produit ajouté !')">
-            </form>
+        <div class = 'product'>
+            <style>
+                table{
+                    border-collapse:collapse;}  
+            </style>
+            <table width="100%">
+                <thead><tr>
+                    <th align="left"><h4>  Clavier Bluetooth  </h4></th>
+                    <th align="left"><p class="description"><em><strong> Description </strong> </p></th>
+                    <th align="center"><em><strong> Prix  </strong> </em></th>
+                </tr></thead>
+                <tbody><tr>
+                    <td width="15%"><p> <img src="clavier.png"/> </p></td>
+                    <td width="45%"><p class="description">Le PinKeyboard, avec son nouveau design, possède une batterie rechargeable et des touches plus fonctionnelles. <br > Le PinKeyboard s’associe automatiquement à tous nos produits.<br >Opérationnel pendant un mois entre chaque chargement.  </p></td>
+                    <td align="center" width="15%"><p> 99,99€ </p></td>
+                    <td align="right" width="25%"><p><form> 
+                        <input class="button" type="button" value=" Ajouter au Panier" onclick="alert('Produit ajouté !')">
+                    </form></p></td>
+                </tr></tbody>
+            </table> 
         </div>
 
     </body>
