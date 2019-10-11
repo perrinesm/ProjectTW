@@ -14,21 +14,25 @@ text-decoration:none;
 body{
 
 	margin-bottom: 65px;
+    font-family: fantasy;
+    font-size: 30px;
 }
 
 
-header
+#headerID
 {
+
 text-decoration: none;
 display: flex;
 flex-direction: column;
 padding-bottom: 10px;
+font-size: 30px;
 
 }
 
 img {
-	width: 110px;
-    height: 110px;
+	width: 180px;
+    height: 180px;
     float: left;
 }
 
@@ -54,22 +58,27 @@ img {
     border-right: 2px;
     border-style: solid;
     clear : both;
-    width:70%;
+    width:45%;
+    height: 45%;
     margin-left: 30px;
     padding-left: 30px;
     margin : 1em;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
     border-color: rgb(83, 135, 88);   
+    display: flex;
+    flex-direction: row;
     
 }
 
 h4 {
     margin-left: 28px;
     margin-top: 5px;
+    font-size: 30px;
 }
 
 .description{
     padding-left: 11%;
+    font-size: 30px;
     
 }
 
@@ -91,45 +100,78 @@ height:20px;
 .logo
 {
 
-    margin-left: 5px;
-    margin-top: 5px;
+    margin-left: 1px;
+    margin-top: 40px;
 
+
+}
+
+#bande{
+
+display: flex;
+flex-direction: row;
+
+}
+
+.menuCart{
+
+font-size: 30px;
+float:right;
+position: relative;
+right: 20px;
 
 }
 
 .menu{
-font-size: 2em;
-font-family: Arial;
+
+font-size: 30px;
+font-family: fantasy;
 color:black;
 margin-left: 0.5em;
 margin-right: 0.5em;
-align-self: flex-end;
+
+
+
 }
 
-.menuCart{
+#bandeDroite{
+
+
+position: fixed;
+right:0;
+display: flex;
+flex-direction: row;
+
+
+}
+
+.logoCart{
+width:45px;
+height:45px;
 float:right;
 position: relative;
-right: 20px;
+
 }
-.logoCart{
-width:55px;
-height:55px;
-}
+
 .button{
     background-color: rgb(83, 135, 88); 
     float:right;
-    height: 60px;
-    width:150px;
+    height: 100px;
+    width:200px;
     position: relative;
     right: 200px;
+    font-size: 30px;
+    font-family: fantasy;
 }
 .button2{
     background-color: rgb(233, 103, 103); 
     float:right;
-    height: 60px;
-    width:150px;
+    height: 100px;
+    width:200px;
     position: relative;
     right: 200px;
+    font-size: 30px;
+    font-family: fantasy;
 }
 
 #logoNom
@@ -156,7 +198,7 @@ padding-top: 5px;
 color:rgb(244,210,20);
 font-size: 100px;
 text-align: center;
-font-family: Arial;
+font-family: fantasy;
 font-style: bold;
 
 }
@@ -177,3 +219,44 @@ h1{
 	font-size: 100px;
 	color:rgb(83,135,88);
 }
+
+
+nav {
+    text-align: left;
+    background-color: cornflowerblue;
+}
+nav a, nav span{
+    color:black;
+    text-decoration: none;
+    transition:color linear 0.2s;
+}
+
+nav a:hover, nav span:hover{
+    color:#ccc;
+}
+
+.menuCategory {
+    display: inline-block;
+    position:relative;
+    padding:5px 10px;
+
+}
+
+.withSeveralLinks {
+    display: none; 
+    position:absolute;   
+    left:-0px;
+    top:100%;
+    background-color: cornflowerblue;
+    padding:5px 10px;
+}
+
+.menuCategory:hover .withSeveralLinks {
+    display: block;
+}
+
+
+
+
+
+
