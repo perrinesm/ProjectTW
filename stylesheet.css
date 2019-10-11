@@ -64,7 +64,7 @@ img {
     padding-bottom: 150px;
     border-color: rgb(83, 135, 88);   
     width:45%;
-    height: 35%;
+    height: 38%;
 }
 
 h4 {
@@ -245,8 +245,10 @@ nav a:hover, nav span:hover{
 
 .footer {
     background:khaki;
-    height: 150px;
-    padding-top: 200px
+    height: 250px;
+    padding-top: 200px;
+    font-size: 30px;
+    
 
 }
 
@@ -255,11 +257,13 @@ nav a:hover, nav span:hover{
     border : 2px solid darkslategray;
     display : flex;
     height: 286px;
+    font-size: 30px;
 
 }
 
 .footer .footer-content .footer-section {
     flex : 1;
+    font-size: 30px;
 }
 
 
