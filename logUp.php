@@ -17,7 +17,7 @@
 </header>
 
 <body>
-	<div align = "center" class='inscription'>
+	<div align = "center" class='inscription'><p><strong>Inscription</strong></p>
 		<form method="post" action="logIn.php"> 	
    			<p>Nom :
    				<br ><input type="text" name="NOM" id="NOM"/>
@@ -44,8 +44,12 @@
    			<p>Mot de passe :
    				<br ><input type="text" name="PW" id="PW"/>
 			</p>
-			<p><br >
-	        <input type="submit" class="buttonInscrip"  value="OK"/>
+			<p>Confirmation du mot de passe :
+   				<br ><input type="text" name="PW2" id="PW2"/>
+			</p>
+			<br ><p>
+			<input type="submit" class="buttonInscrip"  value="OK"/>
+			</p>
 		</form>
 	</div>
 </body>
