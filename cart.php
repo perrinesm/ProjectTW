@@ -2,7 +2,7 @@
 
 <head>
 	
-<link rel="stylesheet" href="style.css">	
+<link rel="stylesheet" href="stylesheet.css">	
 <link rel="icon" type="image/png" href="icon.png" />
 
 </head>
@@ -33,7 +33,7 @@
                 <td width="45%"><p class="description">Son Pure Bass, puissant. <br >Maintenant, vous pouvez même l’emporter avec vous. <br > Découvrez les écouteurs T205 Pineapple au son Pineapple Pure Bass.<br > Ils sont légers. </p></td>
                 <td align="center" width="15%"><p> 34,99€ </p></td>
                 <td align="right" width="25%"><p><form> 
-					<input class="button" type="button" value=" Supprimer" onclick="alert('Produit supprimé !')">	   
+					<input class="button2" type="button" value=" Supprimer" onclick="alert('Produit supprimé !')">	   
                 </form></p></td>
             </tr></tbody>
         </table>

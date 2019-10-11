@@ -2,7 +2,7 @@
 
 <head>
 	
-  <link rel="stylesheet" href="style.css">  
+  <link rel="stylesheet" href="stylesheet.css"> 
   <link rel="icon" type="image/png" href="icon.png" />
 
 </head>
@@ -17,30 +17,17 @@
 </header>
 
 <body>
-	
-	<form method="post" action="index.php"> 	
-   			
-   		
-   		<p>ID :
-
-   		<input type="text" name="ID" id="ID" />
-
-     	</p>
-
-
-
-
-   		<p>Mot de passe :
-
-   		<input type="text" name="PW" id="PW" >
-
-   	    </p>
-
-
-        <input type="submit" class="Bouton" value="OK"/>
-
-	</form>
-
+	<div class = 'inscription'> 
+		<form method="post" action="index.php"> 	
+   			<p>ID :
+   			<input type="text" name="ID" id="ID" />
+     		</p>
+   			<p>Mot de passe :
+   			<input type="text" name="PW" id="PW" >
+   			</p>
+        	<input type="submit" class="Bouton" value="OK"/>
+		</form>
+	</div>
 </body>
 
 
