@@ -13,7 +13,7 @@ text-decoration:none;
 
 body{
 
-	margin-bottom: 65px;
+	margin-bottom: 200px;
     font-family: fantasy;
     font-size: 30px;
 }
@@ -81,18 +81,7 @@ h4 {
 
 
 
-footer
-{
 
-
-position: fixed;
-bottom:0;
-width:100%;
-padding-top:5px;
-padding-bottom:5px;
-height:20px;
-
-}
 
 
 
@@ -254,6 +243,24 @@ nav a:hover, nav span:hover{
 }
 
 
+.footer {
+    background:khaki;
+    height: 200px;
+    padding-top: 250px
+
+}
+
+
+.footer .footer-content {
+    border : 2px solid darkslategray;
+    display : flex;
+    height: 286px;
+
+}
+
+.footer .footer-content .footer-section {
+    flex : 1;
+}
 
 
 
