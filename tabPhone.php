@@ -25,8 +25,8 @@
             <table width="75%">
                 <thead><tr>
                     <th align="left"> <h4 > <a href="telA1.php">  Pinphone XS </a> </h4></th>
-                    <th align="left"><p class="description"><em><strong> Description </strong></em></p></th>
-                    <th align="center"><em><strong> Prix  </strong> </em></th>
+                    <th align="left"><p class="description"><strong> Description </strong></p></th>
+                    <th  align="center"><strong> Prix  </strong> </th>
                 </tr></thead>
                 <tbody><tr>
                     <td ><p> <img src="telA1.png" /> </p></td>
@@ -45,8 +45,8 @@
             <table width="75%">
                 <thead><tr>
                     <th align="left"> <h4> <a href="telA2.php">  Pinphone Xmax </a> </h4></th>
-                    <th align="left"><p class="description"><em><strong> Description </strong></em></p></th>
-                    <th align="center"><em><strong> Prix  </strong> </em></th>
+                    <th align="left"><p class="description"><strong> Description </strong></p></th>
+                    <th align="center"><strong> Prix  </strong> </th>
                 </tr></thead>
                 <tbody><tr>
                     <td ><p> <img src="telA2.png" /> </p></td>
@@ -65,8 +65,8 @@
             <table width="75%">
                 <thead><tr>
                     <th align="left"> <h4>  <a href="telS1.php">  Pineapple 3310x </a> </h4></th>
-                    <th align="left"><p class="description"><em><strong> Description </strong></em></p></th>
-                    <th align="right"><em><strong> Prix  </strong> </em></th>
+                    <th align="left"><p class="description"><strong> Description </strong></p></th>
+                    <th align="right"><strong> Prix  </strong> </th>
                 </tr></thead>
                 <tbody><tr>
                     <td width="16%"><p> <img src="telS1.png" /> </p></td>
@@ -85,8 +85,8 @@
             <table width="75%">
                 <thead><tr>
                     <th align="left"> <h4> <a href="telS2.php">PinGalaxy S9 </a> </h4></th>
-                    <th align="left"><p class="description"><em><strong> Description </strong></em></p></th>
-                    <th align="right"><em><strong> Prix  </strong> </em></th>
+                    <th align="left"><p class="description"><strong> Description </strong></p></th>
+                    <th align="right"><strong> Prix  </strong></th>
                 </tr></thead>
                 <tbody><tr>
                     <td width="15%"><p> <img src="telS2.png" /> </p></td>

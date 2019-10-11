@@ -1,9 +1,9 @@
 <html>
 
 <head>
-
-  <link rel="stylesheet" href="stylesheet.css">  
-  <link rel="icon" type="image/png" href="icon.png" />	
+	<meta charset="utf-8" />
+  	<link rel="stylesheet" href="stylesheet.css">  
+  	<link rel="icon" type="image/png" href="icon.png" />	
 
 </head>
 
@@ -19,16 +19,22 @@
 <body>
 	<div align = "center" class='inscription'>
 		<form method="post" action="logIn.php"> 	
-   			<p>ID :
-   				<input type="text" name="ID" id="ID"/>
+   			<p>Nom :
+   				<br ><input type="text" name="NOM" id="NOM"/>
      		</p>
-   			<p>Mot de passe :
-   				<input type="text" name="PW" id="PW"/>
-   	    	</p>
-   	    	<p>E-mail :
-			   <input type="text" name="mail" id="mail"/>
+   			<p>Prénom :
+   				<br ><input type="text" name="PRENOM" id="PRENOM"/>
 			</p>
-	        <input type="submit" class="Bouton" value="OK"/>
+			<p>Date de naissance (jj/mm/aaaa) :
+   				<br ><input type="text" name="DATE" id="DATE"/>
+   	    	</p>  
+   	    	<p>E-mail :
+			   <br ><input type="text" name="mail" id="mail"/>
+			</p>
+			<p>Téléphone :
+   				<br ><input type="text" name="TEL" id="TEL"/>
+   	    	</p> <br >
+	        <input type="submit" class="Button" value="OK"/>
 		</form>
 	</div>
 </body>
