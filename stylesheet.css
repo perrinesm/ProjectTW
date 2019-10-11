@@ -1,7 +1,7 @@
 *{
 margin:0;
 padding:0;
-background-color:#FEFEE2;
+background-color: khaki;
 
 }
 
@@ -193,7 +193,7 @@ justify-content: center;
 
 padding-bottom: 10px;
 padding-top: 5px;
-color:rgb(244,210,20);
+color:rgb(244, 154, 20);
 font-size: 100px;
 text-align: center;
 font-family: fantasy;
@@ -221,7 +221,7 @@ h1{
 
 nav {
     text-align: left;
-    background-color: cornflowerblue;
+    background-color: khaki;
 }
 nav a, nav span{
     color:black;
@@ -230,7 +230,7 @@ nav a, nav span{
 }
 
 nav a:hover, nav span:hover{
-    color:#ccc;
+    color: khaki;
 }
 
 .menuCategory {
@@ -245,7 +245,7 @@ nav a:hover, nav span:hover{
     position:absolute;   
     left:-0px;
     top:100%;
-    background-color: cornflowerblue;
+    background-color: khaki;
     padding:5px 10px;
 }
 
