@@ -33,8 +33,19 @@
 			</p>
 			<p>Téléphone :
    				<br ><input type="text" name="TEL" id="TEL"/>
-   	    	</p> <br >
-	        <input type="submit" class="Button" value="OK"/>
+   	    	</p> 
+		</form>
+	</div>
+	<div align = "center" class='inscription'>
+		<form method="post" action="logIn.php"> 	
+   			<p>ID :
+   				<br ><input type="text" name="ID" id="ID"/>
+     		</p>
+   			<p>Mot de passe :
+   				<br ><input type="text" name="PW" id="PW"/>
+			</p>
+			<p><br >
+	        <input type="submit" class="buttonInscrip"  value="OK"/>
 		</form>
 	</div>
 </body>
