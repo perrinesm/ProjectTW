@@ -36,7 +36,6 @@
                     </form></p></td>
                 </tr></tbody>
             </table>
-            
         </div>
 
         <div class = 'product'> 
