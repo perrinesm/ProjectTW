@@ -13,6 +13,8 @@
 
     <body style= "display: flex; flex-direction: column;">
         <div class="product">
+        <body style= "display: flex; flex-direction: column;">
+        <div class="product">
         <style>
                 table{
                     border-collapse:collapse;}  
