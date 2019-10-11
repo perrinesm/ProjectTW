@@ -20,7 +20,7 @@
                    border-collapse:collapse;}
                     
             </style>
-            <table width="75%">
+            <table width="100%">
                 <thead><tr>
                     <th align="left"> <h4 style="margin-top: 5px;"> <a href="tabA1.php"> PinPad Pro </a></h4></th>
                     <th align="left"><p class="description"><em><strong> Description </strong></em></p></th>
@@ -40,7 +40,7 @@
                    border-collapse:collapse;}
                     
             </style>
-            <table width="75%">
+            <table width="100%">
                 <thead><tr>
                     <th align="left"> <h4> <a href="tabA2.php"> PinSmart </a> </h4></th>
                     <th align="left"><p class="description"><em><strong> Description </strong></em></p></th>

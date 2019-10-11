@@ -20,7 +20,7 @@
                         border-collapse:collapse;}
                     
                 </style>
-                <table width="75%">
+                <table width="100%">
                     <thead><tr>
                         <th align="left"><h4>  <a href="ordiA1.php"> MacPin Pro </a></h4></th>
                         <th align="left"><p class="description"><em><strong> Description </strong></em></p></th>
@@ -41,7 +41,7 @@
                         border-collapse:collapse;}
                     
                 </style>
-                <table width="75%">
+                <table width="100%">
                     <thead><tr>
                         <th align="left"><h4> <a href="ordiA2.php"> PinTosh 1984 </a> </h4></th>
                         <th align="left"><p class="description"> <em><strong>Description </strong> </em></p></th>
@@ -61,7 +61,7 @@
                         border-collapse:collapse;}
                     
                 </style>
-                <table width="75%">
+                <table width="100%">
                     <thead><tr>
                         <th width="15%" align="left"><h4 > <a href="ordiS1.php">Universe Pin-BOOK</a> </h4></th>
                         <th align="left"> <p class="description"><em><strong> Description </strong> </em></p></th>
@@ -81,7 +81,7 @@
                         border-collapse:collapse;}
                     
                 </style>
-                <table width="75%">
+                <table width="100%">
                     <thead><tr>
                         <th width="15%" align="left"><h4> <a href="ordiS1.php"> SurvivorPin 2.0 </a>  </h4></th>
                         <th align="left"><p class="description"> <em><strong>Description </strong> </em></p></th>
