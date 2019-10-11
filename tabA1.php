@@ -14,7 +14,7 @@
 
     <body style= "display: flex; flex-direction: column;">
         <div class="product">
-        <style>
+            <style>
                 table{
                     border-collapse:collapse;}  
             </style>

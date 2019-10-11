@@ -23,8 +23,8 @@
             <table width="100%">
                 <thead><tr>
                     <th align="left"> <h4 style="margin-top: 5px;"> <a href="tabA1.php"> PinPad Pro </a></h4></th>
-                    <th align="left"><p class="description"><em><strong> Description </strong></em></p></th>
-                    <th align="center"><em><strong> Prix  </strong> </em></th>
+                    <th align="left"><p class="description"><strong> Description </strong></p></th>
+                    <th align="center"><strong> Prix  </strong> </th>
                 </tr></thead>
                 <tbody><tr>
                     <td ><p> <img src="tabA1.png" /> </p></td>
@@ -43,8 +43,8 @@
             <table width="100%">
                 <thead><tr>
                     <th align="left"> <h4> <a href="tabA2.php"> PinSmart </a> </h4></th>
-                    <th align="left"><p class="description"><em><strong> Description </strong></em></p></th>
-                    <th align="center"><em><strong> Prix  </strong> </em></th>
+                    <th align="left"><p class="description"><strong> Description </strong></p></th>
+                    <th align="center"><strong> Prix  </strong> </th>
                 </tr></thead>
                 <tbody><tr>
                     <td ><p> <img src="tabA2.png" /> </p></td>

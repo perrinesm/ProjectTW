@@ -24,8 +24,8 @@
             <table width="100%">
                 <thead><tr>
                     <th align="left"><h4> Ecouteurs </h4></th>
-                    <th align="left"><p class="description"><em><strong> Description </strong> </p></th>
-                    <th align="center"><em><strong> Prix  </strong> </em></th>
+                    <th align="left"><p class="description"><strong> Description </strong> </p></th>
+                    <th align="center"><strong> Prix  </strong> </th>
                 </tr></thead>
                 <tbody><tr>
                     <td width="15%"><p> <img src="ecouteur.jpg"/> </p></td>
@@ -46,8 +46,8 @@
             <table width="100%">
                 <thead><tr>
                     <th align="left"><h4> Etui tablette </h4></th>
-                    <th align="left"><p class="description"><em><strong> Description </strong> </p></th>
-                    <th align="center"><em><strong> Prix  </strong> </em></th>
+                    <th align="left"><p class="description"><strong> Description </strong> </p></th>
+                    <th align="center"><strong> Prix  </strong> </th>
                 </tr></thead>
                 <tbody><tr>
                     <td width="15%"><p> <img src="etui.jpg"/> </p></td>
@@ -68,8 +68,8 @@
             <table width="100%">
                 <thead><tr>
                     <th align="left"><h4>  Chargeur  </h4></th>
-                    <th align="left"><p class="description"><em><strong> Description </strong> </p></th>
-                    <th align="center"><em><strong> Prix  </strong> </em></th>
+                    <th align="left"><p class="description"><strong> Description </strong> </p></th>
+                    <th align="center"><strong> Prix  </strong></th>
                 </tr></thead>
                 <tbody><tr>
                     <td width="15%"><p> <img src="load.jpg"/> </p></td>
@@ -90,8 +90,8 @@
             <table width="100%">
                 <thead><tr>
                     <th align="left"><h4>  Clavier Bluetooth  </h4></th>
-                    <th align="left"><p class="description"><em><strong> Description </strong> </p></th>
-                    <th align="center"><em><strong> Prix  </strong> </em></th>
+                    <th align="left"><p class="description"><strong> Description </strong> </p></th>
+                    <th align="center"><strong> Prix  </strong> </th>
                 </tr></thead>
                 <tbody><tr>
                     <td width="15%"><p> <img src="clavier.png"/> </p></td>

@@ -23,8 +23,8 @@
                 <table width="100%">
                     <thead><tr>
                         <th align="left"><h4>  <a href="ordiA1.php"> MacPin Pro </a></h4></th>
-                        <th align="left"><p class="description"><em><strong> Description </strong></em></p></th>
-                        <th align="center"><em><strong> Prix  </strong> </em></th>
+                        <th align="left"><p class="description"><strong> Description </strong></p></th>
+                        <th align="center"><strong> Prix  </strong> </th>
                     </tr></thead>
                     <tbody><tr>
                         <td ><p> <img src="ordiA1.png" /> </p></td>
@@ -44,8 +44,8 @@
                 <table width="100%">
                     <thead><tr>
                         <th align="left"><h4> <a href="ordiA2.php"> PinTosh 1984 </a> </h4></th>
-                        <th align="left"><p class="description"> <em><strong>Description </strong> </em></p></th>
-                        <th align="center"><em><strong> Prix  </strong> </em></th>
+                        <th align="left"><p class="description"> <strong>Description </strong> </p></th>
+                        <th align="center"><strong> Prix  </strong> </th>
                     </tr></thead>
                     <tbody><tr>
                         <td><p> <img src="ordiA2.png" /> </p></td>
@@ -64,8 +64,8 @@
                 <table width="100%">
                     <thead><tr>
                         <th width="15%" align="left"><h4 > <a href="ordiS1.php">Universe Pin-BOOK</a> </h4></th>
-                        <th align="left"> <p class="description"><em><strong> Description </strong> </em></p></th>
-                        <th align="center"><em><strong> Prix  </strong> </em></th>
+                        <th align="left"> <p class="description"><strong> Description </strong> </p></th>
+                        <th align="center"><strong> Prix  </strong></th>
                     </tr></thead>
                     <tbody><tr>
                         <td><p> <img  src="ordiS1.png" /> </p></td>
@@ -83,9 +83,9 @@
                 </style>
                 <table width="100%">
                     <thead><tr>
-                        <th width="15%" align="left"><h4> <a href="ordiS1.php"> SurvivorPin 2.0 </a>  </h4></th>
-                        <th align="left"><p class="description"> <em><strong>Description </strong> </em></p></th>
-                        <th align="center"><em><strong> Prix  </strong> </em></th>
+                        <th width="15%" align="left"><h4> <a href="ordiS2.php"> SurvivorPin 2.0 </a>  </h4></th>
+                        <th align="left"><p class="description"> <strong>Description </strong></p></th>
+                        <th align="center"><strong> Prix  </strong></th>
                     </tr></thead>
                     <tbody><tr>
                         <td><p> <img src="ordiS2.png" /> </p></td>
