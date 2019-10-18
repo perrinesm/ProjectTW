@@ -22,7 +22,7 @@
             </style>
             <table width="100%">
                 <thead><tr>
-                    <th align="left"> <h4 style="margin-top: 5px;"> <a href="tabA1.php"> PinPad Pro </a></h4></th>
+                    <th align="left"> <h4 style="margin-top: 5px;"> <a href="product.php?product=PinPad Pro 13.3"> PinPad Pro </a></h4></th>
                     <th align="left"><p class="description"><strong> Description </strong></p></th>
                     <th align="center"><strong> Prix  </strong> </th>
                 </tr></thead>
