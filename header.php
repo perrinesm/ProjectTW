@@ -23,10 +23,10 @@
                     <span class="navtitle">Produit</span>
                 <div class="withSeveralLinks">
                     
-                <a href = 'tabPhone.php' class = "menu">Téléphones</a>
-                <a href = 'tabTab.php' class = "menu">Tablettes</a>
-                <a href = 'tabOrdi.php' class = "menu">Ordinateurs</a>
-                <a href = 'tabAcc.php' class = "menu">Accessoires</a>
+                <a href = 'tab.php?productType=telephone' class = "menu">Téléphones</a>
+                <a href = 'tab.php?productType=tablette' class = "menu">Tablettes</a>
+                <a href = 'tab.php?productType=ordinateur' class = "menu">Ordinateurs</a>
+                <a href = 'tab.php?productType=accessoire' class = "menu">Accessoires</a>
             
 
 
