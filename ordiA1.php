@@ -20,7 +20,7 @@
             </style>
             <table width="100%">
                 <thead><tr>
-                    <th align="left"><h2> PinPad Pro 13.3 </h2></th>
+                    <th align="left"><h2> LapPinTop 2k19 </h2></th>
                     <th align="left"><p style="padding-left: 15px; font-size: 120%"> Caractéristiques :<br />  </p></th>
                 </tr></thead>
                 <tbody><tr>
