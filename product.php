@@ -25,7 +25,7 @@
 
             
 
-            $productTable = $bdd->query("SELECT * FROM `producttable` WHERE `produit` = " . $productName."");
+            $productTable = $bdd->query("SELECT * FROM `tableproduit` WHERE `produit` = " . $productName."");
 
 
             
@@ -51,11 +51,11 @@
             </style>
             <table width="100%">
                 <thead><tr>
-                    <th align="left"> <h2> PinPad Pro 13.3 </h2></th>
+                    <th align="left"> <h2><?php echo($productLine['produit'])?></h2></th>
                     <th align="left"><p style="padding-left: 15px; font-size: 120%"> Caractéristiques :<br />  </p></th>
                 </tr></thead>
                 <tbody><tr>
-                    <td width="20%"><p> <img style="width: 240px; height: 240px" src="tabA1.png"/> </p></td>
+                    <td width="20%"><p> <img style="width: 240px; height: 240px" src=<?php echo("'".$productLine['image']."'")?>/> </p></td>
                     <td width="45%"><p class="description"> <p> 
 
 

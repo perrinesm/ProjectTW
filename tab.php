@@ -50,7 +50,7 @@
 
             echo("<h2 style='margin-left: 90px;'>".$type."</h2>");
 
-            $tabTable = $bdd->query("SELECT * FROM `tabtable` WHERE `type` = ".$productType."");
+            $tabTable = $bdd->query("SELECT * FROM `tableproduit` WHERE `type` = ".$productType."");
 
             
 
@@ -83,7 +83,7 @@
                             <th  align='center'><strong> Prix  </strong> </th>
                         </tr></thead>
                         <tbody><tr>
-                            <td ><p> <img src='telA1.png' /> </p></td>
+                            <td ><p> <img src='".$productLine['image']."'/> </p></td>
                             <td width='70%''><p class='description'> ".$description."</p></td>
                             <td width='15%'' align='center'><p> ".$prix."€ </p></td>
                         </tr></tbody>
