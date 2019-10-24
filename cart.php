@@ -17,30 +17,72 @@
 </header>
 
 <body >
-	<div  class = 'product'>  
-        <style>
-            table{
-                border-collapse:collapse;}  
-        </style>
-        <table width="100%">
-            <thead><tr>
-                <th align="left"><h4> Ecouteurs </h4></th>
-                <th align="left"><p class="description"><strong> Description </strong></p></th>
-                <th align="center"style="font-size:30px"><strong> Prix  </strong></th>
-            </tr></thead>
-            <tbody ><tr>
-               	<td width="15%"><p> <img src="ecouteur.jpg"/> </p></td>
-                <td width="45%"><p class="description">Son Pure Bass, puissant. <br >Maintenant, vous pouvez même l’emporter avec vous. <br > Découvrez les écouteurs T205 Pineapple au son Pineapple Pure Bass.<br > Ils sont légers. </p></td>
-                <td align="center" width="15%"style="font-size:30px"><p> 34,99€ </p></td>
-                <td align="right" width="25%"><p><form> 
-					<input class="button2" type="button" value=" Supprimer" onclick="alert('Produit supprimé !')">	   
-                </form></p></td>
-            </tr></tbody>
-        </table>
+
+
+    <?php
+
+    include_once "bdd.php";
+
+    $cartTable = $bdd->query("SELECT * FROM `cart`");
+
+    $produitNum = 0;   
+
+    while($cartLine = $cartTable->fetch()){
+
+        $productTable = $bdd->query("SELECT * FROM `tableproduit` WHERE `produit` = '".$cartLine['produit']."'");
+
+        $productLine = $productTable->fetch();        
+        
+
+        if(isset($_POST[$produitNum])){
             
-    </div>
-	
-	Votre panier est fixe car le code est en html strict !
+
+            $suppr = $bdd->query("DELETE FROM `cart` WHERE `produit` = '". $productLine['produit']."'");
+
+        }
+
+        else{
+
+            
+
+            echo("
+
+	       <div  class = 'product'>  
+                <style>
+                    table{border-collapse:collapse;}  
+                </style>
+                <table width='100%''>
+                    <thead><tr>
+                        <th align='left'><h4>".$productLine['produit']."</h4></th>
+                        <th align='left'><p class='description'><strong> Description </strong></p></th>
+                        <th align='center'style='font-size:30px'><strong> Prix  </strong></th>
+                    </tr></thead>
+                    <tbody ><tr>
+               	        <td width='15%'><p> <img src='".$productLine['image']."'/> </p></td>
+                        <td width='45%''><p class='description'>".$productLine['description']."</p></td>
+                        <td align='center' width='15%' style='font-size:30px'><p>".$productLine['prix']."</p></td>
+                        <td align='right' width='25%''><p>
+
+                        <form action = 'cart.php' method = 'post'> 
+					       <input class='button2' type='submit' name='".$produitNum."' value='Supprimer' onclick='alert(\"Produit supprimé !\")''>	   
+                        /form>
+
+                        </p></td>
+                    </tr></tbody>
+                </table>
+            
+            </div>
+
+            ");
+
+        }
+
+
+        $produitNum = $produitNum + 1;
+
+    }
+
+    ?>
 
 	<a href = 'index.php' class = 'menu'style="text-align:center"><p><strong>Retour à l'accueil</strong></p></a>
 
