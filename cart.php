@@ -27,17 +27,27 @@
 
     $produitNum = 0;   
 
+    $done = false;
+
+    $vide = true;
+
     while($cartLine = $cartTable->fetch()){
+
+        $vide = false;
 
         $productTable = $bdd->query("SELECT * FROM `tableproduit` WHERE `produit` = '".$cartLine['produit']."'");
 
         $productLine = $productTable->fetch();        
         
 
-        if(isset($_POST[$produitNum])){
+        if(isset($_POST[$produitNum]) and $done == false){
             
 
             $suppr = $bdd->query("DELETE FROM `cart` WHERE `produit` = '". $productLine['produit']."'");
+
+            $done = true;
+
+            $produitNum = $produitNum - 1;
 
         }
 
@@ -56,16 +66,19 @@
                         <th align='left'><h4>".$productLine['produit']."</h4></th>
                         <th align='left'><p class='description'><strong> Description </strong></p></th>
                         <th align='center'style='font-size:30px'><strong> Prix  </strong></th>
+                        <th align='center'style='font-size:30px'><strong> Quantité  </strong></th>
+                        
                     </tr></thead>
                     <tbody ><tr>
                	        <td width='15%'><p> <img src='".$productLine['image']."'/> </p></td>
                         <td width='45%''><p class='description'>".$productLine['description']."</p></td>
                         <td align='center' width='15%' style='font-size:30px'><p>".$productLine['prix']."</p></td>
-                        <td align='right' width='25%''><p>
+                        <td align='center' width='15%' style='font-size:30px'><p>".$cartLine['quantite']."</p></td>
+                        <td align='right' width='15%''><p>
 
                         <form action = 'cart.php' method = 'post'> 
 					       <input class='button2' type='submit' name='".$produitNum."' value='Supprimer' onclick='alert(\"Produit supprimé !\")''>	   
-                        /form>
+                        </form>
 
                         </p></td>
                     </tr></tbody>
@@ -81,6 +94,12 @@
         $produitNum = $produitNum + 1;
 
     }
+
+    if ($vide){
+
+        echo("Votre panier est vide !");
+    }
+
 
     ?>
 
