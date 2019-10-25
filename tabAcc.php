@@ -73,7 +73,7 @@
                 </tr></thead>
                 <tbody><tr>
                     <td width="15%"><p> <img src="load.jpg"/> </p></td>
-                    <td width="45%"><p class="description">Chargeur Secteur 1A + cable USB, connecteur lightning.  <br > Rechargez facilement vos appareils disposant d'une entree Pineapple Lightning (PinPhone pro, PinPod, ..). <br >  Cable lightning inclus, longueur 0,90 cm.<br >Etui compatible avec toutes les tablettes Pineapple.  </p></td>
+                    <td width="45%"><p class="description">Chargeur Secteur 1A + cable USB, connecteur lightning.  <br > Rechargez facilement vos appareils disposant d'une entree Pineapple Lightning (PinPhone pro, PinPod, ..). <br >  Cable lightning inclus, longueur 0,90 cm.<br >  </p></td>
                     <td align="center" width="15%"><p> 9,99€ </p></td>
                     <td align="right" width="25%"><p><form> 
                         <input class="button" type="button" value=" Ajouter au Panier" onclick="alert('Produit ajouté !')">

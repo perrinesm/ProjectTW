@@ -64,13 +64,6 @@
 
         ?>
 
-
-
-
-
-
-
-
         <div class="product">
             <style>
                 table{
