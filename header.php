@@ -20,29 +20,42 @@
                
                 <div class="menuCategory">
 
-                    <span class="navtitle">Produit</span>
-                <div class="withSeveralLinks">
+                    <form method = "get" action = "search.php">
+
+                        <span class="navtitle">Produit</span>
+
+                        <div class="withSeveralLinks">
                     
-                <a href = 'tab.php?productType=telephone' class = "menu">Téléphones</a>
-                <a href = 'tab.php?productType=tablette' class = "menu">Tablettes</a>
-                <a href = 'tab.php?productType=ordinateur' class = "menu">Ordinateurs</a>
-                <a href = 'tab.php?productType=accessoire' class = "menu">Accessoires</a>
-            
+                            <a href = 'tab.php?productType=telephone' class = "menu">Téléphones</a>
+                            <a href = 'tab.php?productType=tablette' class = "menu">Tablettes</a>
+                            <a href = 'tab.php?productType=ordinateur' class = "menu">Ordinateurs</a>
+                            <a href = 'tab.php?productType=accessoire' class = "menu">Accessoires</a>       
 
+
+                        </div>
+
+                        <?php 
+
+                            $bdd = new PDO('mysql:host=localhost;dbname=pineapple','root','');
+                            $articles = $bdd->query('SELECT produit FROM tableproduit ');
+
+                        ?>                        
+
+                        <meta><input type="search" name="bar" id="bar" placeholder="Recherche..." /></meta>
+
+                        <meta class="menu"><input type="submit" value="Valider"/></meta>
+
+                    </form>
 
                 </div>
-                </div>
 
-                <?php 
-             $bdd = new PDO('mysql:host=localhost;dbname=pineapple','root','');
-             $articles = $bdd->query('SELECT produit FROM tableproduit ');
-                 ?>
-             <form method="GET">
-                <input type="search" name="bar" placeholder="Recherche..."/>
-                <input type="submit" value="Valider" />
-             </form>
-             
-             
+
+                
+
+                    
+
+                
+
 
             </div>
 
