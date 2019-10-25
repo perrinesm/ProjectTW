@@ -144,11 +144,11 @@ position: relative;
 }
 .button2{
     background-color: rgb(233, 103, 103); 
-    float:right;
-    height: 100px;
+    float:center;
+    height: 80px;
     width:200px;
     position: relative;
-    right: 200px;
+    right: 50px;
     font-size: 30px;
     font-family: fantasy;
 }

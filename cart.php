@@ -120,7 +120,7 @@
                         <form action = 'cart.php' method = 'post'> 
 
                             <select name='quantiteSuppr' id='quantiteSuppr' class='button'>
-                                <option value='error'>Quantite</option>
+                                <option value='1'>QuantitéSupprimée</option>
                                 <option value='1'>1</option>
                                 <option value='2'>2</option>
                                 <option value='3'>3</option>
