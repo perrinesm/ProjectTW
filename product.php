@@ -30,7 +30,38 @@
 
             
             $productLine = $productTable->fetch();
-        
+
+    
+
+
+
+            
+            if(isset($_POST['quantite'])){
+
+                $cartTable = $bdd->query("SELECT * FROM `cart` WHERE `produit` = " . $productName."");
+
+                $quantitePrecedante = 0;
+
+                while($cartLine = $cartTable->fetch()){
+
+                    $quantitePrecedante = $cartLine['quantite'] + $quantitePrecedante;
+
+                    $suppr = $bdd->query("DELETE FROM `cart` WHERE `produit` = " . $productName."");
+
+                }
+            
+                $req = $bdd->prepare('INSERT INTO cart(produit, quantite) VALUES(?,?)');
+
+
+                $req->execute(array($_GET['product'], $_POST['quantite'] + $quantitePrecedante));
+
+
+            }
+            
+
+            
+
+
         ?>
 
         <div class="product">
@@ -45,7 +76,7 @@
                 </tr></thead>
                 <tbody><tr>
                     <td width="20%"><p> <img style="width: 240px; height: 240px" src=<?php echo("'".$productLine['image']."'")?>/> </p></td>
-                    <td width="45%"><p class="description"> <p> 
+                    <td width="40%"><p class="description"> <p> 
 
 
 
@@ -58,13 +89,28 @@
                         <strong><?php echo($productLine['car7'])?></strong> <?php echo($productLine['des7'])?> <br/>
                         <strong><?php echo($productLine['car8'])?></strong> <?php echo($productLine['des8'])?> <br/>
 
-                        
+                       
 
                     </p>
-                    <td align="center" width="15%"><p><strong> Prix  </strong><br > 899,99€ </p></td>
-                    <td align="right" width="20%"><p><form> 
-                        <input class="button" type="button" value=" Ajouter au Panier" onclick="alert('Produit ajouté !')">
-                    </form></p></td>
+                    <td align="left" width="10%"><p><strong> Prix  </strong><br > 899,99€ </p></td>
+                    <td align="right" width="30%">
+                        <p>
+                        <form method="post" action = '<?php echo('product.php?product='.$productLine['produit'].'')?>'>
+                            <select name="quantite" id="quantite" class="button">
+                                <option value="error">Quantité</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                            
+                            <input type="submit" class="button" value=" Ajouter au Panier" onclick="alert('Element(s) ajouté(s) au panier !')" />
+                        </form></p>
+                    </td>
                 </tr></tbody>
             </table>
         </div>
