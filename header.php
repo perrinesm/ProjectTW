@@ -34,12 +34,7 @@
 
                         </div>
 
-                        <?php 
-
-                            $bdd = new PDO('mysql:host=localhost;dbname=pineapple','root','');
-                            $articles = $bdd->query('SELECT produit FROM tableproduit ');
-
-                        ?>                        
+                                               
 
                         <meta><input type="search" name="bar" id="bar" placeholder="Recherche..." /></meta>
 

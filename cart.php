@@ -23,35 +23,43 @@
 
     include_once "bdd.php";
 
+    $produitNum = 0;
+
+    $done = false;
+
+    if (isset($_POST['quantiteSuppr'])){
+
+    while (!$done){
+
     if(isset($_POST[$produitNum]) and $done == false){
 
-            $cartTable = $bdd->query("SELECT * FROM `cart`");
+            $done = true;
+
+            $cartTable = $bdd->query("SELECT * FROM `cart`");            
+
+            $i = 0;
+
+            $cartLine = $cartTable->fetch();
+
+            while($i != $produitNum){
 
 
-            $produitNum = 0;   
+                $cartLine = $cartTable->fetch();
 
-
-            while($cartLine = $cartTable->fetch()){
-
-
-                $cartLine = $cartTable->fetch()
-
-                $produitNum =  
+                $i =  $i + 1;
 
             }
 
 
             if($cartLine['quantite'] - $_POST['quantiteSuppr'] < 1){            
 
-                $suppr = $bdd->query("DELETE FROM `cart` WHERE `produit` = '". $productLine['produit']."'");
-
-                $produitNum = $produitNum - 1;
+                $suppr = $bdd->query("DELETE FROM `cart` WHERE `produit` = '". $cartLine['produit']."'");
 
             }
 
             else{
 
-                $suppr = $bdd->query("DELETE FROM `cart` WHERE `produit` = " . $cartLine['produit']."");
+                $suppr = $bdd->query("DELETE FROM `cart` WHERE `produit` = '" . $cartLine['produit']."'");
 
                 $req = $bdd->prepare('INSERT INTO cart(produit, quantite) VALUES(?,?)');
 
@@ -63,11 +71,19 @@
 
         }
 
+        $produitNum = $produitNum + 1;
+
+    }
+
+}
+
     $cartTable = $bdd->query("SELECT * FROM `cart`");
 
     $done = false;
 
     $vide = true;
+
+    $numSend = 0;
 
     while($cartLine = $cartTable->fetch()){
 
@@ -115,7 +131,7 @@
                                 <option value='8'>8</option>
                             </select>
 
-					       <input class='button2' type='submit' name='".$produitNum."' value='Supprimer' onclick='alert(\"Produit supprimé !\")''>	
+					       <input class='button2' type='submit' name='".$numSend."' value='Supprimer' onclick='alert(\"Produit supprimé !\")''>	
 
                         </form>
 
@@ -128,7 +144,7 @@
             ");      
 
 
-        
+        $numSend = $numSend + 1;
 
     }
 
