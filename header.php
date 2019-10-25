@@ -70,7 +70,7 @@
 
                 <a href='logUp.php' class="menu">Inscription</a>
 
-                <a href = 'cart.php'><img class="images/logoCart" src="panier.png"></a>
+                <a href = 'cart.php'><img class="logoCart" src="images/panier.png"></a>
                 
                 </form>
    
