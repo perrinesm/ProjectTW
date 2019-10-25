@@ -23,9 +23,9 @@
             </button>
           </form></p></td>
         </tr><tr >
-          <td width="15%" align="center"><p><img src="logofb.png" style="align=center; padding-left: 8px; width: 15%; height: 15%;" />
-            <img src="logoInsta.png" style="align=center; padding-left: 8px; width: 15%; height: 15%;" />
-            <img src="logotwi.png" style="align=center; padding-left: 8px; width: 15%; height: 15%;" /></p> </td>
+          <td width="15%" align="center"><p><img src="images/logofb.png" style="align=center; padding-left: 8px; width: 15%; height: 15%;" />
+            <img src="images/logoInsta.png" style="align=center; padding-left: 8px; width: 15%; height: 15%;" />
+            <img src="images/logotwi.png" style="align=center; padding-left: 8px; width: 15%; height: 15%;" /></p> </td>
         </tr><tr align="center">
           <td width="15%"><p style="color: darkblue"> MAIL :  pineapple9a7ba@pineapple-contact.com </p></td>
         </tr></tbody>

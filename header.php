@@ -8,7 +8,7 @@
 
         <div id="logoNom">
             <a href = 'index.php' class = "titre">PINEAPPLE</a>
-            <img src="logo.png" class = "logo"> 
+            <img src="images/logo.png" class = "logo"> 
             
         </div>
 

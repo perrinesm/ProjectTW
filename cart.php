@@ -111,7 +111,7 @@
                         
                     </tr></thead>
                     <tbody ><tr>
-               	        <td width='15%'><p> <img src='".$productLine['image']."'/> </p></td>
+               	        <td width='15%'><p> <img src='images/".$productLine['image']."'/> </p></td>
                         <td width='45%''><p class='description'>".$productLine['description']."</p></td>
                         <td align='center' width='15%' style='font-size:30px'><p>".$productLine['prix']."</p></td>
                         <td align='center' width='15%' style='font-size:30px'><p>".$cartLine['quantite']."</p></td>
