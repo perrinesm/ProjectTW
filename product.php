@@ -30,19 +30,8 @@
 
             
             $productLine = $productTable->fetch();
-            
-
-            
-
-
+        
         ?>
-
-
-
-
-
-
-
 
         <div class="product">
             <style>

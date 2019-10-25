@@ -30,16 +30,19 @@
             
 
 
-            </div>
-            </div>
+                </div>
+                </div>
 
-
-                <meta class="menu">Recherche :</meta>
-
-                <meta><input type="text" name="ID" id="ID" /></meta>
-
-                <meta class="menu"><input type="submit" class="Bouton" value="OK"/></meta>
-
+                <?php 
+             $bdd = new PDO('mysql:host=localhost;dbname=pineapple','root','');
+             $articles = $bdd->query('SELECT produit FROM tableproduit ');
+                 ?>
+             <form method="GET">
+                <input type="search" name="bar" placeholder="Recherche..."/>
+                <input type="submit" value="Valider" />
+             </form>
+             
+             
 
             </div>
 
