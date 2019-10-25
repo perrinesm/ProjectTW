@@ -226,6 +226,7 @@ nav a:hover, nav span:hover{
     display: inline-block;
     position:relative;
     padding:5px 10px;
+    
 
 }
 
@@ -235,7 +236,10 @@ nav a:hover, nav span:hover{
     left:-0px;
     top:100%;
     background-color: khaki;
-    padding:5px 10px;
+    padding:5px 15px;
+    font-size: 30px;
+    
+
 }
 
 .menuCategory:hover .withSeveralLinks {
@@ -247,7 +251,7 @@ nav a:hover, nav span:hover{
     background:khaki;
     height: 250px;
     padding-top: 200px;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 25px;
     
 
@@ -258,13 +262,13 @@ nav a:hover, nav span:hover{
     border : 2px solid darkslategray;
     display : flex;
     height: 286px;
-    font-size: 30px;
+    font-size: 25px;
 
 }
 
 .footer .footer-content .footer-section {
     flex : 1;
-    font-size: 30px;
+    font-size: 25px;
     }
 
 

@@ -26,9 +26,9 @@
 
                         <div class="withSeveralLinks">
                     
-                            <a href = 'tab.php?productType=telephone' class = "menu">Téléphones</a>
-                            <a href = 'tab.php?productType=tablette' class = "menu">Tablettes</a>
-                            <a href = 'tab.php?productType=ordinateur' class = "menu">Ordinateurs</a>
+                            <a href = 'tab.php?productType=telephone' class = "menu">Téléphones</a><br/>
+                            <a href = 'tab.php?productType=tablette' class = "menu">Tablettes</a><br/>
+                            <a href = 'tab.php?productType=ordinateur' class = "menu">Ordinateurs</a><br/>
                             <a href = 'tab.php?productType=accessoire' class = "menu">Accessoires</a>       
 
 
