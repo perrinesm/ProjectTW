@@ -4,6 +4,9 @@ padding:0;
 background-color: khaki;
 
 }
+:root{
+    --font_size : 20px;
+}
 
 a:link 
 { 
@@ -15,7 +18,7 @@ body{
 
 	margin-bottom: 200px;
     font-family: fantasy;
-    font-size: 30px;
+    font-size: var(--font_size);
 }
 
 
@@ -26,7 +29,7 @@ text-decoration: none;
 display: flex;
 flex-direction: column;
 padding-bottom: 10px;
-font-size: 30px;
+font-size: var(--font_size);
 
 }
 
@@ -70,12 +73,12 @@ img {
 h4 {
     margin-left: 28px;
     margin-top: 5px;
-    font-size: 30px;
+    font-size: var(--font_size);
 }
 
 .description{
     padding-left: 11%;
-    font-size: 30px;
+    font-size: var(--font_size);
     
 }
 
@@ -94,7 +97,7 @@ flex-direction: row;
 
 .menuCart{
 
-font-size: 30px;
+font-size: var(--font_size);
 float:right;
 position: relative;
 right: 20px;
@@ -103,7 +106,7 @@ right: 20px;
 
 .menu{
 
-font-size: 30px;
+font-size: var(--font_size);
 font-family: fantasy;
 color:black;
 margin-left: 0.5em;
@@ -139,7 +142,7 @@ position: relative;
     width:200px;
     position: relative;
     right: 50px;
-    font-size: 30px;
+    font-size: var(--font_size);
     font-family: fantasy;
 }
 .button2{
@@ -149,14 +152,14 @@ position: relative;
     width:200px;
     position: relative;
     right: 200px;
-    font-size: 30px;
+    font-size: var(--font_size);
     font-family: fantasy;
 }
 .buttonInscrip{
     background-color: rgb(83, 135, 88); 
     height: 100px;
     width:200px;
-    font-size: 30px;
+    font-size: var(--font_size);
     font-family: fantasy;
 }
 
@@ -202,8 +205,8 @@ font-style: bold;
 
 
 h1{
-	margin-top: 100px;
-	font-size: 100px;
+	margin-top: 50px;
+	font-size: 30px;
 	color:rgb(83,135,88);
 }
 
@@ -245,11 +248,16 @@ nav a:hover, nav span:hover{
 
 .footer {
     background:khaki;
-    height: 250px;
-    padding-top: 200px;
-    font-size: 30px;
-    
+    max-height: 10px;
+    position: absolute;
+    bottom: 0;
+    font-size: var(--font_size);
+    line-height: 20px;
 
+}
+
+.footer th{
+    height: 10px;
 }
 
 
@@ -257,13 +265,13 @@ nav a:hover, nav span:hover{
     border : 2px solid darkslategray;
     display : flex;
     height: 286px;
-    font-size: 30px;
+    font-size: var(--font_size);
 
 }
 
 .footer .footer-content .footer-section {
     flex : 1;
-    font-size: 30px;
+    font-size: var(--font_size);
 }
 
 
