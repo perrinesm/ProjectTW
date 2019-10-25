@@ -83,7 +83,7 @@
                 </tr></thead>
                 <tbody><tr>
                     <td width="20%"><p> <img style="width: 240px; height: 240px" src=<?php echo("'".$productLine['image']."'")?>/> </p></td>
-                    <td width="45%"><p class="description"> <p> 
+                    <td width="40%"><p class="description"> <p> 
 
 
 
@@ -99,8 +99,8 @@
                        
 
                     </p>
-                    <td align="center" width="15%"><p><strong> Prix  </strong><br > 899,99€ </p></td>
-                    <td align="right" width="20%"><p> 
+                    <td align="left" width="10%"><p><strong> Prix  </strong><br > 899,99€ </p></td>
+                    <td align="right" width="30%"><p> 
 
 
                     <form method="post" action = '<?php echo('product.php?product='.$productLine['produit'].'')?>'>
