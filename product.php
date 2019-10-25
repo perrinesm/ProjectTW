@@ -99,7 +99,7 @@
                        
 
                     </p>
-                    <td align="left" width="10%"><p><strong> Prix  </strong><br > 899,99€ </p></td>
+                    <td align="left" width="10%"><p><strong> Prix  </strong><br > <?php echo($productLine['prix'])?> </p></td>
                     <td align="right" width="30%"><p> 
 
 
