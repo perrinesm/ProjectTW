@@ -8,7 +8,7 @@
 
         <div id="logoNom">
             <a href = 'index.php' class = "titre">PINEAPPLE</a>
-            <img src="logo.png" class = "logo"> 
+            <img src="images/logo.png" class = "logo"> 
             
         </div>
 
@@ -34,12 +34,7 @@
 
                         </div>
 
-                        <?php 
-
-                            $bdd = new PDO('mysql:host=localhost;dbname=pineapple','root','');
-                            $articles = $bdd->query('SELECT produit FROM tableproduit ');
-
-                        ?>                        
+                                               
 
                         <meta><input type="search" name="bar" id="bar" placeholder="Recherche..." /></meta>
 

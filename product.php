@@ -82,7 +82,7 @@
                     <th align="left"><p style="padding-left: 15px; font-size: 120%"> Caractéristiques :<br />  </p></th>
                 </tr></thead>
                 <tbody><tr>
-                    <td width="20%"><p> <img style="width: 240px; height: 240px" src=<?php echo("'".$productLine['image']."'")?>/> </p></td>
+                    <td width="20%"><p> <img style="width: 240px; height: 240px" src=<?php echo("'images/".$productLine['image']."'")?>/> </p></td>
                     <td width="40%"><p class="description"> <p> 
 
 
@@ -99,7 +99,7 @@
                        
 
                     </p>
-                    <td align="left" width="10%"><p><strong> Prix  </strong><br > 899,99€ </p></td>
+                    <td align="left" width="10%"><p><strong> Prix  </strong><br > <?php echo($productLine['prix'])?> </p></td>
                     <td align="right" width="30%"><p> 
 
 
