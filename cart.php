@@ -23,9 +23,47 @@
 
     include_once "bdd.php";
 
-    $cartTable = $bdd->query("SELECT * FROM `cart`");
+    if(isset($_POST[$produitNum]) and $done == false){
 
-    $produitNum = 0;   
+            $cartTable = $bdd->query("SELECT * FROM `cart`");
+
+
+            $produitNum = 0;   
+
+
+            while($cartLine = $cartTable->fetch()){
+
+
+                $cartLine = $cartTable->fetch()
+
+                $produitNum =  
+
+            }
+
+
+            if($cartLine['quantite'] - $_POST['quantiteSuppr'] < 1){            
+
+                $suppr = $bdd->query("DELETE FROM `cart` WHERE `produit` = '". $productLine['produit']."'");
+
+                $produitNum = $produitNum - 1;
+
+            }
+
+            else{
+
+                $suppr = $bdd->query("DELETE FROM `cart` WHERE `produit` = " . $cartLine['produit']."");
+
+                $req = $bdd->prepare('INSERT INTO cart(produit, quantite) VALUES(?,?)');
+
+                $req->execute(array($cartLine['produit'], $cartLine['quantite'] - $_POST['quantiteSuppr']));
+
+            }
+
+            $done = true;
+
+        }
+
+    $cartTable = $bdd->query("SELECT * FROM `cart`");
 
     $done = false;
 
@@ -40,20 +78,7 @@
         $productLine = $productTable->fetch();        
         
 
-        if(isset($_POST[$produitNum]) and $done == false){
-            
-
-            $suppr = $bdd->query("DELETE FROM `cart` WHERE `produit` = '". $productLine['produit']."'");
-
-            $done = true;
-
-            $produitNum = $produitNum - 1;
-
-        }
-
-        else{
-
-            
+                  
 
             echo("
 
@@ -77,7 +102,21 @@
                         <td align='right' width='15%''><p>
 
                         <form action = 'cart.php' method = 'post'> 
-					       <input class='button2' type='submit' name='".$produitNum."' value='Supprimer' onclick='alert(\"Produit supprimé !\")''>	   
+
+                            <select name='quantiteSuppr' id='quantiteSuppr' class='button'>
+                                <option value='error'>Quantite</option>
+                                <option value='1'>1</option>
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                <option value='4'>4</option>
+                                <option value='5'>5</option>
+                                <option value='6'>6</option>
+                                <option value='7'>7</option>
+                                <option value='8'>8</option>
+                            </select>
+
+					       <input class='button2' type='submit' name='".$produitNum."' value='Supprimer' onclick='alert(\"Produit supprimé !\")''>	
+
                         </form>
 
                         </p></td>
@@ -86,12 +125,10 @@
             
             </div>
 
-            ");
-
-        }
+            ");      
 
 
-        $produitNum = $produitNum + 1;
+        
 
     }
 
