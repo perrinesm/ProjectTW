@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 25 Octobre 2019 à 16:31
+-- Généré le :  Mer 06 Novembre 2019 à 19:34
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -30,6 +30,27 @@ CREATE TABLE IF NOT EXISTS `cart` (
   `produit` varchar(255) NOT NULL,
   `quantite` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `membres`
+--
+
+CREATE TABLE IF NOT EXISTS `membres` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pseudo` varchar(255) NOT NULL,
+  `mail` varchar(255) NOT NULL,
+  `motdepasse` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `membres`
+--
+
+INSERT INTO `membres` (`id`, `pseudo`, `mail`, `motdepasse`) VALUES
+(1, 'pm', 'pm@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef');
 
 -- --------------------------------------------------------
 
