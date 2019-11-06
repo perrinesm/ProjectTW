@@ -19,21 +19,36 @@ if(isset($_POST['forminscription']))
                   $reqmail = $bdd->prepare("SELECT * FROM membres WHERE mail = ?");
                   $reqmail->execute(array($mail));
                   $mailexist = $reqmail->rowCount();
-                  if($mailexist == 0)
+
+                  $reqpseudo = $bdd->prepare("SELECT * FROM membres WHERE pseudo = ?");
+                  $reqpseudo->execute(array($pseudo));
+                  $pseudoexist = $reqpseudo->rowCount();
+
+                  if($mailexist == 0 AND $pseudoexist == 0)
                   {
                     if($mdp == $mdp2) {
                      $insertmbr = $bdd->prepare("INSERT INTO membres(pseudo, mail, motdepasse) VALUES(?, ?, ?)");
                      $insertmbr->execute(array($pseudo, $mail, $mdp));
-                     $_SESSION['comptecree'] = " Compte créé"; /** remplacer par $erreur si bug */
-                     header('Location: index.php');
+                     $erreur= "Compte créé"; /** remplacer par $erreur si bug /$_SESSION['comptecree']header('Location: index.php'); */
+                     
                     }
                     else {
                        $erreur = "Mots de passe différents";
                     }
                   }
-                  else {
+
+                  if ($pseudoexist != 0 || $mailexist != 0){
+                    if ($pseudoexist == 0 ){
                       $erreur = "Adresse mail déjà prise";
+                    }
+                    else{
+                      $erreur = "Pseudo déjà pris";
+                    }
                   }
+                  if($pseudoexist != 0  AND $mailexist != 0){
+                      $erreur = "Pseudo et adresse mail déjà pris";
+                  }
+                    
 
                 }
               else { 
