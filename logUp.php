@@ -20,7 +20,7 @@
 
 	<?php 
 
-$bdd = new PDO('mysql:host=localhost;dbname=pineapple','root','antoine08');
+include "bdd.php";
 
 if(isset($_POST['forminscription']))
 {
@@ -118,6 +118,11 @@ if(isset($_POST['forminscription']))
 			<input type="submit" name="forminscription" class="buttonInscrip" value="OK" />
 			</p>
 		</form>
+		<?php 
+            if(isset($erreur)) {
+                echo '<font color="red" > '.$erreur."</font>";
+            }
+        ?>
 	</div>
 	
 </body>
