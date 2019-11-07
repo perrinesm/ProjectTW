@@ -10,59 +10,53 @@ if(isset($_POST['forminscription']))
     $mdp2 = sha1($_POST['mdp2']);
     if(!empty($_POST['pseudo']) AND !empty($_POST['mail']) AND !empty($_POST['mail2']) AND !empty($_POST['mdp']) AND !empty($_POST['mdp2']))
     {
-        $pseudolength = strlen($pseudo);
-        if($pseudolength <= 255) {
-             
-            if($mail == $mail2) {
-              if(filter_var($mail, FILTER_VALIDATE_EMAIL)) 
-               { 
-                  $reqmail = $bdd->prepare("SELECT * FROM membres WHERE mail = ?");
-                  $reqmail->execute(array($mail));
-                  $mailexist = $reqmail->rowCount();
+      $pseudolength = strlen($pseudo);
+      if($pseudolength <= 255) { 
+        if($mail == $mail2) {
+          if(filter_var($mail, FILTER_VALIDATE_EMAIL)) 
+           { 
+            $reqmail = $bdd->prepare("SELECT * FROM membres WHERE mail = ?");
+            $reqmail->execute(array($mail));
+            $mailexist = $reqmail->rowCount();
 
-                  $reqpseudo = $bdd->prepare("SELECT * FROM membres WHERE pseudo = ?");
-                  $reqpseudo->execute(array($pseudo));
-                  $pseudoexist = $reqpseudo->rowCount();
+            $reqpseudo = $bdd->prepare("SELECT * FROM membres WHERE pseudo = ?");
+            $reqpseudo->execute(array($pseudo));
+            $pseudoexist = $reqpseudo->rowCount();
 
-                  if($mailexist == 0 AND $pseudoexist == 0)
-                  {
-                    if($mdp == $mdp2) {
-                     $insertmbr = $bdd->prepare("INSERT INTO membres(pseudo, mail, motdepasse) VALUES(?, ?, ?)");
-                     $insertmbr->execute(array($pseudo, $mail, $mdp));
-                     $erreur= "Compte créé"; /** remplacer par $erreur si bug /$_SESSION['comptecree']header('Location: index.php'); */
-                     
-                    }
-                    else {
-                       $erreur = "Mots de passe différents";
-                    }
-                  }
-
-                  if ($pseudoexist != 0 || $mailexist != 0){
-                    if ($pseudoexist == 0 ){
-                      $erreur = "Adresse mail déjà prise";
-                    }
-                    else{
-                      $erreur = "Pseudo déjà pris";
-                    }
-                  }
-                  if($pseudoexist != 0  AND $mailexist != 0){
-                      $erreur = "Pseudo et adresse mail déjà pris";
-                  }
-                    
-
-                }
-              else { 
-                  $erreur = "Mail pas valide";
-                }
+            if($mailexist == 0 AND $pseudoexist == 0)
+              {
+              if($mdp == $mdp2) {
+              $insertmbr = $bdd->prepare("INSERT INTO membres(pseudo, mail, motdepasse) VALUES(?, ?, ?)");
+              $insertmbr->execute(array($pseudo, $mail, $mdp));
+               $erreur= "Compte créé <a href=\"connexionessay.php\">Me connecter</a>"; /** remplacer par $erreur si bug /$_SESSION['comptecree']header('Location: index.php'); */ 
+              }
+              else {
+               $erreur = "Mots de passe différents";
+              }
             }
-            else {
-                $erreur = "Mails différents";
+            if ($pseudoexist != 0 || $mailexist != 0){
+              if ($pseudoexist == 0 ){
+                $erreur = "Adresse mail déjà prise";
+              }
+              else{
+                $erreur = "Pseudo déjà pris";
+              }
             }
-
+            if($pseudoexist != 0  AND $mailexist != 0){
+                $erreur = "Pseudo et adresse mail déjà pris";
+            }  
+          }
+          else { 
+            $erreur = "Mail pas valide";
+          }
         }
         else {
-            $erreur = "Votre pseudo ne doit pas dépasser 255 caractères" ;
+          $erreur = "Mails différents";
         }
+      }
+      else {
+        $erreur = "Votre pseudo ne doit pas dépasser 255 caractères" ;
+      }
     }
     else {
         $erreur = "Compléter tous les champs";    
@@ -137,3 +131,4 @@ if(isset($_POST['forminscription']))
     
     
     </body>
+</html>
