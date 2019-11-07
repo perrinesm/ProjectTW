@@ -8,8 +8,8 @@ if(isset($_POST['formconnect']))
     $mdpconnect = sha1($_POST['mdpconnect']);
     if(!empty($mailconnect) AND !empty($mdpconnect))
     {
-        $requser = $bdd->prepare("SELECT * FROM membres WHERE mail = ? AND motdepasse= ?" );
-        $requser->execute(array($mailconnect,$mdpconnect));
+        $requser = $bdd -> prepare("SELECT * FROM membres WHERE mail = ? AND motdepasse= ?" );
+        $requser -> execute(array($mailconnect,$mdpconnect));
         $userexist =$requser ->rowCount();
         if ($userexist==1){
             $userinfo=$requser->fetch();
