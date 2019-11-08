@@ -29,7 +29,7 @@
                
                 <div class="menuCategory">
 
-                    <form method = "get" action = "search.php">
+                    <form method = "get" action = "index.php?page=search.php">
 
                         <span class="navtitle">Produit</span>
 
@@ -114,7 +114,7 @@
                
                 <div class="menuCategory">
 
-                    <form method = "get" action = "search.php">
+                    <form method = "get" action = "index.php?page=search.php">
 
                         <span class="navtitle">Produit</span>
 
@@ -191,7 +191,7 @@
                
                 <div class="menuCategory">
 
-                    <form method = "get" action = "search.php">
+                    <form method = "get" action = "index.php?page=search.php">
 
                         <span class="navtitle">Produit</span>
 
@@ -266,7 +266,7 @@
                
                 <div class="menuCategory">
 
-                    <form method = "get" action = "search.php">
+                    <form method = "get" action = "index.php?page=search.php">
 
                         <span class="navtitle">Produit</span>
 
