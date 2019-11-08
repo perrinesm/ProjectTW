@@ -75,6 +75,6 @@ if(isset($_SESSION['id']))
 <?php
 } 
 else{
-    header("Location: index.php?page=connexionessay");
+    header("Location: index.php");
 }
 ?>
