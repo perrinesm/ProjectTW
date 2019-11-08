@@ -1,25 +1,5 @@
-<html>
 
-<head>
-	
-<link rel="stylesheet" href="stylesheet.css">	
-<link rel="icon" type="image/png" href="icon.png" />
-
-</head>
-
-
-
-<header>
-	
-	<?php include "header.php";?>
-
-
-</header>
-
-<body >
-
-
-    <?php
+<?php
 
     include_once "bdd.php";
 
@@ -158,15 +138,7 @@
 
 	<a href = 'index.php' class = 'menu'style="text-align:center"><p><strong>Retour à l'accueil</strong></p></a>
 
-</body>
 
 
 
-<footer>
-	
-	<?php include "footer.php";?>
 
-</footer>
-
-
-</html>
