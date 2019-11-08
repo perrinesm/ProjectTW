@@ -31,7 +31,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
         <?php 
         if(isset($_SESSION['id'])) {
             ?>
-            <a href='#'> Editer mon profil </a>
+            <a href='editionprofil.php'> Editer mon profil </a>
             <a href='deconnexion.php'> Se déconnecter </a>
             <?php
               
