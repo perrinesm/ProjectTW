@@ -14,6 +14,12 @@ if(isset($_GET['id'])){
             $session = true;
 
 }
+
+$page="index";
+	if(isset($_GET['page'])){
+		$page=$_GET['page'];
+				
+	}
             
 
 ?>
@@ -37,11 +43,24 @@ if(isset($_GET['id'])){
 </header>
 
 <body>
-	<section>
-		<center>
-			<h1> Bienvenue ! </h1>
-		</center>
-	</section>
+	<?php
+	
+	if(!($page==="index")){
+		
+		include "".$page."view.php";
+		include "".$page."action.php";
+		
+	}
+	else{
+		echo("
+		<section>
+			<center>
+				<h1> Bienvenue ! </h1>
+			</center>
+		</section>
+	");
+	}
+	?>
 </body>
 
 
