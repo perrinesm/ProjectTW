@@ -1,29 +1,12 @@
-<!DOCTYPE html>
 
-<html>
+
 <div id = "all">
-<head>
 
-<link rel="stylesheet" href="style.css">    
-<link rel="icon" type="image/png" href="icon.png" />
-
-</head>
-
-
-
-<header>
-    
-    <?php include "header.php";?>
-
-
-</header>
-
-<body>
     
 
     <?php
 
-    include_once "bdd.php";
+    
 
     function compare($m, $chaine){
 
@@ -144,7 +127,7 @@
                     </style>
                     <table width='100%''>
                         <thead><tr>
-                            <th align='left'> <h4 > <a href='product.php?product=".$produit."''>  ".$produit." </a> </h4></th>
+                            <th align='left'> <h4 > <a href='index.php?page=product&amp;product=".$produit."''>  ".$produit." </a> </h4></th>
                             <th align='left'><p class='description'><strong> Description </strong></p></th>
                             <th  align='center'><strong> Prix  </strong> </th>
                         </tr></thead>
@@ -177,13 +160,4 @@
 
 </body>
 
-
-
-<footer>
-    
-    <?php include "footer.php";?>
-
-</footer>
-
 </div>
-</html>

@@ -1,6 +1,5 @@
 <?php 
 session_start();
-$bdd = new PDO('mysql:host=localhost;dbname=pineapple','root','');
 
 if(isset($_POST['formconnect']))
 {
@@ -16,7 +15,7 @@ if(isset($_POST['formconnect']))
             $_SESSION['id']=$userinfo['id'];
             $_SESSION['pseudo']=$userinfo['pseudo'];
             $_SESSION['mail']=$userinfo['mail'];
-            header("Location: profil.php?id=".$_SESSION['id']);
+            header("Location: index.php?page=profil&amp;id=".$_SESSION['id']);
 
         }
         else{

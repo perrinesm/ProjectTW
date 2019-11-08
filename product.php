@@ -1,23 +1,11 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="stylesheet.css" />
-        <title></title>
-    </head>
+  
 
-    <header>
-        <?php 
-        include "header.php";
-        ?>
-    </header>
-
-    <body style= "display: flex; flex-direction: column;">
+   <body style= "display: flex; flex-direction: column;">
 
          <?php
 
             
-            include_once "bdd.php";
+            
 
             
             $productName = "'".$_GET['product']."'";
@@ -103,7 +91,7 @@
                     <td align="right" width="30%"><p> 
 
 
-                    <form method="post" action = '<?php echo('product.php?product='.$productLine['produit'].'')?>'>
+                    <form method="post" action = '<?php echo('index.php?page=product&amp;product='.$productLine['produit'].'')?>'>
 
                         <select name="quantite" id="quantite" class="button">
                             <option value="error">Quantite</option>
@@ -129,11 +117,3 @@
         </div>
     </body>
 
-    <footer>
-        <?php 
-        include "footer.php";
-        ?>
-    </footer>
-    
-    </html>
-<!DOCTYPE html>

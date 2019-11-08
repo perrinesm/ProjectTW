@@ -10,7 +10,7 @@ edouard
 
             <?php
 
-            include "bdd.php";
+       
 
         if(isset($_SESSION['id'])){
 
@@ -29,16 +29,16 @@ edouard
                
                 <div class="menuCategory">
 
-                    <form method = "get" action = "search.php">
+                    <form method = "get" action = "index.php?page=search">
 
                         <span class="navtitle">Produit</span>
 
                         <div class="withSeveralLinks">
                     
-                            <a href = "tab.php?productType=telephone" class = "menu">Téléphones</a><br/>
-                            <a href = "tab.php?productType=tablette" class = "menu">Tablettes</a><br/>
-                            <a href = "tab.php?productType=ordinateur" class = "menu">Ordinateurs</a><br/>
-                            <a href = "tab.php?productType=accessoire" class = "menu">Accessoires</a>       
+                            <a href = "index.php?page=tab&amp;productType=telephone" class = "menu">Téléphones</a><br/>
+                            <a href = "index.php?page=tab&amp;productType=tablette" class = "menu">Tablettes</a><br/>
+                            <a href = "index.php?page=tab&amp;productType=ordinateur" class = "menu">Ordinateurs</a><br/>
+                            <a href = "index.php?page=tab&amp;productType=accessoire" class = "menu">Accessoires</a>       
 
 
                         </div>
@@ -70,11 +70,11 @@ edouard
 
                     
 
-                <a href="logUp.php" class="menu">Profil</a>
+                <a href="index.php?page=logUp" class="menu">Profil</a>
 
-                <a href="logUp.php" class="menu">Deconnexion</a>
+                <a href="index.php?page=logUp." class="menu">Deconnexion</a>
 
-                <a href = "cart.php"><img class="logoCart" src="images/panier.png"></a>');
+                <a href = "index.php?page=cart"><img class="logoCart" src="images/panier.png"></a>');
 
         }
 
@@ -121,16 +121,16 @@ edouard
                
                 <div class="menuCategory">
 
-                    <form method = "get" action = "search.php">
+                    <form method = "get" action = "index.php?page=search">
 
                         <span class="navtitle">Produit</span>
 
                         <div class="withSeveralLinks">
                     
-                            <a href = "tab.php?productType=telephone" class = "menu">Téléphones</a><br/>
-                            <a href = "tab.php?productType=tablette" class = "menu">Tablettes</a><br/>
-                            <a href = "tab.php?productType=ordinateur" class = "menu">Ordinateurs</a><br/>
-                            <a href = "tab.php?productType=accessoire" class = "menu">Accessoires</a>       
+                            <a href = "index.php?page=tab&amp;productType=telephone" class = "menu">Téléphones</a><br/>
+                            <a href = "index.php?page=tab&amp;productType=tablette" class = "menu">Tablettes</a><br/>
+                            <a href = "index.php?page=tab&amp;productType=ordinateur" class = "menu">Ordinateurs</a><br/>
+                            <a href = "index.php?page=tab&amp;productType=accessoire" class = "menu">Accessoires</a>       
 
 
                         </div>
@@ -170,9 +170,9 @@ edouard
                 <meta class="menu"><input type="submit" class="Bouton" name="formconnect" value="OK"/></meta>
 
                 <font color="red" > '.$erreur.'</font>
-                <a href="logUp.php" class="menu">Inscription</a>
+                <a href="index.php?page=logUp" class="menu">Inscription</a>
 
-                <a href = "cart.php"><img class="logoCart" src="images/panier.png"></a>');
+                <a href = "index.php?page=cart"><img class="logoCart" src="images/panier.png"></a>');
 
                     }
 
@@ -198,16 +198,16 @@ edouard
                
                 <div class="menuCategory">
 
-                    <form method = "get" action = "search.php">
+                    <form method = "get" action = "index.php?page=search">
 
                         <span class="navtitle">Produit</span>
 
                         <div class="withSeveralLinks">
                     
-                            <a href = "tab.php?productType=telephone" class = "menu">Téléphones</a><br/>
-                            <a href = "tab.php?productType=tablette" class = "menu">Tablettes</a><br/>
-                            <a href = "tab.php?productType=ordinateur" class = "menu">Ordinateurs</a><br/>
-                            <a href = "tab.php?productType=accessoire" class = "menu">Accessoires</a>       
+                            <a href = "index.php?page=tab&amp;productType=telephone" class = "menu">Téléphones</a><br/>
+                            <a href = "index.php?page=tab&amp;productType=tablette" class = "menu">Tablettes</a><br/>
+                            <a href = "index.php?page=tab&amp;productType=ordinateur" class = "menu">Ordinateurs</a><br/>
+                            <a href = "index.php?page=tab&amp;productType=accessoire" class = "menu">Accessoires</a>       
 
 
                         </div>
@@ -248,9 +248,9 @@ edouard
 
                                 <font color="red" > '.$erreur.'</font>
 
-                                <a href="logUp.php" class="menu">Inscription</a>
+                                <a href="index.php?page=logUp" class="menu">Inscription</a>
 
-                                <a href = "cart.php"><img class="logoCart" src="images/panier.png"></a>');
+                                <a href = "index.php?page=cart"><img class="logoCart" src="images/panier.png"></a>');
 
                     }
 
@@ -273,16 +273,16 @@ edouard
                
                 <div class="menuCategory">
 
-                    <form method = "get" action = "search.php">
+                    <form method = "get" action = "index.php?page=search">
 
                         <span class="navtitle">Produit</span>
 
                         <div class="withSeveralLinks">
                     
-                            <a href = "tab.php?productType=telephone" class = "menu">Téléphones</a><br/>
-                            <a href = "tab.php?productType=tablette" class = "menu">Tablettes</a><br/>
-                            <a href = "tab.php?productType=ordinateur" class = "menu">Ordinateurs</a><br/>
-                            <a href = "tab.php?productType=accessoire" class = "menu">Accessoires</a>       
+                            <a href = "index.php?page=tab&amp;productType=telephone" class = "menu">Téléphones</a><br/>
+                            <a href = "index.php?page=tab&amp;productType=tablette" class = "menu">Tablettes</a><br/>
+                            <a href = "index.php?page=tab&amp;productType=ordinateur" class = "menu">Ordinateurs</a><br/>
+                            <a href = "index.php?page=tab&amp;productType=accessoire" class = "menu">Accessoires</a>       
 
 
                         </div>
@@ -322,9 +322,9 @@ edouard
 
                 <meta class="menu"><input type="submit" class="Bouton" name="formconnect" value="OK"/></meta>
 
-                <a href="logUp.php" class="menu">Inscription</a>
+                <a href="index.php?page=logUp" class="menu">Inscription</a>
 
-                <a href = "cart.php"><img class="logoCart" src="images/panier.png"></a>');
+                <a href = "index.php?page=cart"><img class="logoCart" src="images/panier.png"></a>');
 
 
 

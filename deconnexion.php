@@ -2,6 +2,6 @@
 session_start();
 $_SESSION =array();
 session_destroy();
-header("Location:connexionessay.php");
+header("Location:index.php?page=connexionessay");
 
 ?>

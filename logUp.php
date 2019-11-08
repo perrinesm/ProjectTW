@@ -1,27 +1,4 @@
-<html>
-
-<head>
-	<meta charset="utf-8" />
-  	<link rel="stylesheet" href="stylesheet.css">  
-  	<link rel="icon" type="image/png" href="icon.png" />	
-
-</head>
-
-
-
-<header>
-	
-	<?php include "header.php";?>
-
-
-</header>
-
-<body>
-
-	<?php 
-
-include "bdd.php";
-
+<?php 
 if(isset($_POST['forminscription']))
 {
     $pseudo = htmlspecialchars($_POST['pseudo']);   
@@ -50,7 +27,7 @@ if(isset($_POST['forminscription']))
                     if($mdp == $mdp2) {
                      $insertmbr = $bdd->prepare("INSERT INTO membres(pseudo, mail, motdepasse) VALUES(?, ?, ?)");
                      $insertmbr->execute(array($pseudo, $mail, $mdp));
-                     $erreur= "Compte créé <a href = 'connexionessay.php'>Me connecter</a>"; /** remplacer par $erreur si bug /$_SESSION['comptecree']header('Location: index.php'); */
+                     $erreur= "Compte créé <a href = 'index.php?page=connexionessay'>Me connecter</a>"; /** remplacer par $erreur si bug /$_SESSION['comptecree']header('Location: index.php'); */
                      
                     }
                     else {
@@ -124,18 +101,3 @@ if(isset($_POST['forminscription']))
             }
         ?>
 	</div>
-	
-</body>
-
-
-
-<footer >
-	
-	<?php 
-	include "footer.php";
-	?>
-
-</footer>
-
-
-</html>

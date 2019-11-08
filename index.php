@@ -27,10 +27,11 @@ $page="index";
 <html>
 <div id = "all">
 <head>
-
-<link rel="stylesheet" href="style.css">	
-<link rel="icon" type="image/png" href="icon.png" />
-
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="stylesheet.css" />
+	<link rel="icon" type="image/png" href="icon.png" />
+    <title></title>
+	
 </head>
 
 
@@ -47,8 +48,8 @@ $page="index";
 	
 	if(!($page==="index")){
 		
-		include "".$page."view.php";
-		include "".$page."action.php";
+		include "".$page.".php";
+		
 		
 	}
 	else{

@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$bdd = new PDO('mysql:host=localhost;dbname=pineapple','root','');
+
 
 if(isset($_SESSION['id']))
 {
@@ -13,7 +13,7 @@ if(isset($_SESSION['id']))
        $newpseudo= htmlspecialchars($_POST['newpseudo']);
        $insertpseudo=$bdd->prepare("UPDATE membres SET pseudo=? WHERE id=?");
        $insertpseudo->execute(array($newpseudo,$_SESSION['id']));
-       header('Location: profil.php?id='.$_SESSION['id']);
+       header('Location: index.php?page=profil&amp;id='.$_SESSION['id']);
 
    }
    if(isset($_POST['newmail']) AND !empty($_POST['newmail'])AND $_POST['newmail'] != $user['mail']) 
@@ -21,7 +21,7 @@ if(isset($_SESSION['id']))
        $newmail= htmlspecialchars($_POST['newmail']);
        $insertmail=$bdd->prepare("UPDATE membres SET mail=? WHERE id=?");
        $insertmail->execute(array($newmail,$_SESSION['id']));
-       header('Location: profil.php?id='.$_SESSION['id']);
+       header('Location: index.php?page=profil&amp;id='.$_SESSION['id']);
 
    }
    if(isset($_POST['newmdp1']) AND !empty($_POST['newmdp1']) AND isset($_POST['newmdp2']) AND !empty($_POST['newmdp2']))
@@ -32,7 +32,7 @@ if(isset($_SESSION['id']))
        if($mdp1 == $mdp2){
             $insertmdp=$bdd->prepare("UPDATE membres SET motdepasse=? WHERE id=?");
             $insertmdp->execute(array($mdp1,$_SESSION['id']));
-            header('Location: profil.php?id='.$_SESSION['id']);
+            header('Location: index.php?page=profil&amp;id='.$_SESSION['id']);
        }
        else
        {
@@ -77,6 +77,6 @@ if(isset($_SESSION['id']))
 <?php
 } 
 else{
-    header("Location: connexionessay.php");
+    header("Location: index.php?page=connexionessay");
 }
 ?>

@@ -1,7 +1,7 @@
 
 <?php
 
-    include_once "bdd.php";
+    
 
     $produitNum = 0;
 
@@ -97,7 +97,7 @@
                         <td align='center' width='15%' style='font-size:30px'><p>".$cartLine['quantite']."</p></td>
                         <td align='right' width='15%''><p>
 
-                        <form action = 'cart.php' method = 'post'> 
+                        <form action = 'index.php?page=cart' method = 'post'> 
 
                             <select name='quantiteSuppr' id='quantiteSuppr' class='button'>
                                 <option value='1'>QuantitéSupprimée</option>

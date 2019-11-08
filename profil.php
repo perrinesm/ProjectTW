@@ -2,8 +2,6 @@
 session_start();
 
 
-include "bdd.php";
-
 if(isset($_GET['id']) AND $_GET['id'] > 0)
 {
     $getid= intval($_GET['id']);
@@ -14,14 +12,8 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
 
 ?>
 
-
-
 <html>
-    <head>
-     <title> test connexion </title>
-     <meta charset="utf-8">
-    </head>
-
+    
     <body>
     <div align="center">     
         <h2> Profil de <?php echo $userinfo['pseudo'];?></h2>
@@ -33,8 +25,8 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
         <?php 
         if(isset($_SESSION['id'])) {
             ?>
-            <a href='editionprofil.php'> Editer mon profil </a>
-            <a href='deconnexion.php'> Se déconnecter </a>
+            <a href='index.php?page=editionprofil'> Editer mon profil </a>
+            <a href='index.php?page=deconnexion'> Se déconnecter </a>
             <?php
               
         }
