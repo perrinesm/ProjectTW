@@ -58,35 +58,45 @@
 
             include "bdd.php";
 
-            if(isset($_POST['formconnect']))
-{
-    $mailconnect = htmlspecialchars($_POST['mailconnect']);
-    $mdpconnect = sha1($_POST['mdpconnect']);
-    if(!empty($mailconnect) AND !empty($mdpconnect))
-    {
-        $requser = $bdd -> prepare("SELECT * FROM membres WHERE mail = ? AND motdepasse= ?" );
-        $requser -> execute(array($mailconnect,$mdpconnect));
-        $userexist =$requser ->rowCount();
-        if ($userexist==1){
-            $userinfo=$requser->fetch();
-            $_SESSION['id']=$userinfo['id'];
-            $_SESSION['pseudo']=$userinfo['pseudo'];
-            $_SESSION['mail']=$userinfo['mail'];
-            header("Location: profil.php?id=".$_SESSION['id']);
+        if(isset($session)){
+
+            echo('<div id="bandeDroite">
+
+                <form method="POST" action=" "> 
+
+                    '.$pseudo.'
+
+
+                ');
 
         }
+
         else{
-            $erreur="Mauvais mail ou mot de passe";
-        }
-    }
-    else{
-        $erreur="Compléter tous les champs";
-    }
-}
-?>
 
+            if(isset($_POST['formconnect'])){
 
-            <div id="bandeDroite">
+                $mailconnect = htmlspecialchars($_POST['mailconnect']);
+                $mdpconnect = sha1($_POST['mdpconnect']);
+                if(!empty($mailconnect) AND !empty($mdpconnect)){
+
+                    $requser = $bdd -> prepare("SELECT * FROM membres WHERE mail = ? AND motdepasse= ?" );
+                    $requser -> execute(array($mailconnect,$mdpconnect));
+                    $userexist =$requser ->rowCount();
+
+                    if ($userexist==1){
+
+                        $userinfo=$requser->fetch();
+                        $_SESSION['id']=$userinfo['id'];
+                        $_SESSION['pseudo']=$userinfo['pseudo'];
+                        $_SESSION['mail']=$userinfo['mail'];
+                        header("Location: index.php?id=".$_SESSION['id']);
+                    }
+
+                    else{
+
+                        $erreur="Mauvais mail ou mot de passe";
+
+                        echo('<div id="bandeDroite">
 
                 <form method="POST" action=" "> 
 
@@ -100,13 +110,71 @@
 
                 <meta class="menu"><input type="submit" class="Bouton" name="formconnect" value="OK"/></meta>
 
-                <a href='logUp.php' class="menu">Inscription</a>
+                <font color="red" > '.$erreur.'</font>');
 
-                <a href = 'cart.php'><img class="logoCart" src="images/panier.png"></a>
+                    }
+
+                }
+
+                else{
+
+                    $erreur="Compléter tous les champs";
+
+                    echo('<div id="bandeDroite">
+
+                            <form method="POST" action=" "> 
+
+                                <meta class="menu">E-Mail :</meta>
+
+                                <meta class="menu"><input type="text" name="mailconnect" id="ID" /></meta>
+
+                                <meta class="menu">Password :</meta>
+
+                                <meta class="menu"><input type="text" name="mdpconnect" id="PW" ></meta>
+
+                                <meta class="menu"><input type="submit" class="Bouton" name="formconnect" value="OK"/></meta>
+
+                                <font color="red" > '.$erreur.'</font>');
+
+                    }
+
+            }
+
+            else{
+
+
+                echo('<div id="bandeDroite">
+
+                <form method="POST" action=" "> 
+
+                <meta class="menu">E-Mail :</meta>
+
+                <meta class="menu"><input type="text" name="mailconnect" id="ID" /></meta>
+
+                <meta class="menu">Password :</meta>
+
+                <meta class="menu"><input type="text" name="mdpconnect" id="PW" ></meta>
+
+                <meta class="menu"><input type="submit" class="Bouton" name="formconnect" value="OK"/></meta>');
+
+
+
+            }
+
+        }
+
+
+?>
+                <a href="logUp.php" class="menu">Inscription</a>
+
+                <a href = "cart.php"><img class="logoCart" src="images/panier.png"></a>
                 
                 </form>
    
             </div>
+
+
+            
 
         </div>
 
