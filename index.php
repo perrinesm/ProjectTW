@@ -4,16 +4,7 @@
 
 include "bdd.php";
 
-if(isset($_GET['id'])){
-
-            $requser = $bdd ->query("SELECT * FROM `membres` WHERE `id` = '".$_GET['id']."'" );
-            $user = $requser -> fetch();
-            $pseudo = $user['pseudo'];
-            $id = $user['id'];
-            $mail = $user['mail'];
-            $session = true;
-
-}
+session_start ();
 
 $page="index";
 	if(isset($_GET['page'])){

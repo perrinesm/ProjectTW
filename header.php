@@ -29,7 +29,7 @@
                
                 <div class="menuCategory">
 
-                    <form method = "get" action = "index.php?page=search.php">
+                    <form method = "get" action = "index.php">
 
                         <span class="navtitle">Produit</span>
 
@@ -49,6 +49,8 @@
 
                         <meta class="menu"><input type="submit" value="Valider"/></meta>
 
+                        <input type = "hidden" name ="page" id = "page" value="search"/>
+
                     </form>
 
                 </div>
@@ -63,9 +65,9 @@
 
                     
 
-                <a href="index.php?page=logUp" class="menu">Profil</a>
+                <a href="index.php?page=profil" class="menu">Profil</a>
 
-                <a href="index.php?page=logUp" class="menu">Deconnexion</a>
+                <a href="index.php?page=deconnexion" class="menu">Deconnexion</a>
 
                 <a href = "index.php?page=cart"><img class="logoCart" src="images/panier.png"></a>');
 
@@ -134,6 +136,8 @@
 
                         <meta class="menu"><input type="submit" value="Valider"/></meta>
 
+                        <input type = "hidden" name ="page" id = "page" value="search"/>
+
                     </form>
 
                 </div>
@@ -158,7 +162,7 @@
 
                 <meta class="menu">Password :</meta>
 
-                <meta class="menu"><input type="text" name="mdpconnect" id="PW" ></meta>
+                <meta class="menu"><input type="password" name="mdpconnect" id="PW" ></meta>
 
                 <meta class="menu"><input type="submit" class="Bouton" name="formconnect" value="OK"/></meta>
 
@@ -211,6 +215,8 @@
 
                         <meta class="menu"><input type="submit" value="Valider"/></meta>
 
+                        <input type = "hidden" name ="page" id = "page" value="search"/>
+
                     </form>
 
                 </div>
@@ -235,7 +241,7 @@
 
                                 <meta class="menu">Password :</meta>
 
-                                <meta class="menu"><input type="text" name="mdpconnect" id="PW" ></meta>
+                                <meta class="menu"><input type="password" name="mdpconnect" id="PW" ></meta>
 
                                 <meta class="menu"><input type="submit" class="Bouton" name="formconnect" value="OK"/></meta>
 
@@ -286,6 +292,8 @@
 
                         <meta class="menu"><input type="submit" value="Valider"/></meta>
 
+                        <input type = "hidden" name ="page" id = "page" value="search"/>
+
                     </form>
 
                 </div>
@@ -311,7 +319,7 @@
 
                 <meta class="menu">Password :</meta>
 
-                <meta class="menu"><input type="text" name="mdpconnect" id="PW" ></meta>
+                <meta class="menu"><input type="password" name="mdpconnect" id="PW" ></meta>
 
                 <meta class="menu"><input type="submit" class="Bouton" name="formconnect" value="OK"/></meta>
 

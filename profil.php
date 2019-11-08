@@ -1,26 +1,14 @@
-<?php 
-session_start();
 
-
-if(isset($_GET['id']) AND $_GET['id'] > 0)
-{
-    $getid= intval($_GET['id']);
-    $requser=$bdd->prepare('SELECT * FROM membres WHERE id =?');
-    $requser->execute(array($getid));
-    $userinfo=$requser->fetch();
-}
-
-?>
 
 <html>
     
     <body>
     <div align="center">     
-        <h2> Profil de <?php echo $userinfo['pseudo'];?></h2>
+        <h2> Profil de <?php echo $_SESSION['pseudo'];?></h2>
         <br /><br />
-        Pseudo = <?php echo $userinfo['pseudo'];?>
+        Pseudo = <?php echo $_SESSION['pseudo'];?>
         <br/>
-        Mail = <?php echo $userinfo['mail'];?> 
+        Mail = <?php echo $_SESSION['mail'];?> 
         <br />
         <?php 
         if(isset($_SESSION['id'])) {
