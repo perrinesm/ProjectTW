@@ -28,7 +28,7 @@ if(isset($_POST['forminscription']))
               if($mdp == $mdp2) {
               $insertmbr = $bdd->prepare("INSERT INTO membres(pseudo, mail, motdepasse) VALUES(?, ?, ?)");
               $insertmbr->execute(array($pseudo, $mail, $mdp));
-               $erreur= "Compte créé <a href=\"connexionessay.php\">Me connecter</a>"; /** remplacer par $erreur si bug /$_SESSION['comptecree']header('Location: index.php'); */ 
+              $erreur= "Compte créé <a href=\"connexionessay.php\">Me connecter</a>"; /** remplacer par $erreur si bug /$_SESSION['comptecree']header('Location: index.php'); */ 
               }
               else {
                $erreur = "Mots de passe différents";

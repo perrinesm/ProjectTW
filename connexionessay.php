@@ -1,6 +1,6 @@
 <?php 
-
-include "bdd.php";
+session_start();
+$bdd = new PDO('mysql:host=localhost;dbname=pineapple','root','');
 
 if(isset($_POST['formconnect']))
 {
@@ -9,7 +9,7 @@ if(isset($_POST['formconnect']))
     if(!empty($mailconnect) AND !empty($mdpconnect))
     {
         $requser = $bdd -> prepare("SELECT * FROM membres WHERE mail = ? AND motdepasse= ?" );
-        $requser -> execute(array($mailconnect,$mdpconnect));
+        $requser ->execute(array($mailconnect,$mdpconnect));
         $userexist =$requser ->rowCount();
         if ($userexist==1){
             $userinfo=$requser->fetch();

@@ -8,7 +8,7 @@ if(isset($_SESSION['id']))
    $requser->execute(array($_SESSION['id']));
    $user =$requser->fetch();
 
-   if(isset($_POST['newpseudo']) AND !empty($_POST['newpseudo']) AND $_POST['newpseudo']!= $user['pseudo'])
+   if(isset($_POST['newpseudo']) AND !empty($_POST['newpseudo']) AND $_POST['newpseudo'] != $user['pseudo'])
    {
        $newpseudo= htmlspecialchars($_POST['newpseudo']);
        $insertpseudo=$bdd->prepare("UPDATE membres SET pseudo=? WHERE id=?");
@@ -16,7 +16,7 @@ if(isset($_SESSION['id']))
        header('Location: profil.php?id='.$_SESSION['id']);
 
    }
-   if(isset($_POST['newmail']) AND !empty($_POST['newmail']) AND $_POST['newmail']!= $user['mail']) 
+   if(isset($_POST['newmail']) AND !empty($_POST['newmail'])AND $_POST['newmail'] != $user['mail']) 
    {
        $newmail= htmlspecialchars($_POST['newmail']);
        $insertmail=$bdd->prepare("UPDATE membres SET mail=? WHERE id=?");
@@ -29,20 +29,17 @@ if(isset($_SESSION['id']))
        $mdp1=sha1($_POST['newmdp1']);
        $mdp2=sha1($_POST['newmdp2']);
 
-       if($mdp1==$mdp2){
+       if($mdp1 == $mdp2){
             $insertmdp=$bdd->prepare("UPDATE membres SET motdepasse=? WHERE id=?");
-            $insertmdp->execute(array($md1,$_SESSION['id']));
+            $insertmdp->execute(array($mdp1,$_SESSION['id']));
             header('Location: profil.php?id='.$_SESSION['id']);
        }
-       else{
-           $msg="vous deux mots de passe ne correspondent pas ";
+       else
+       {
+            $msg="vos deux mots de passe ne correspondent pas ";
        }
+       
    }
-   if(isset($_POST['newpseudo'])AND $_POST['newpseudo']==$user['pseudo'])
-   {
-    header('Location: profil.php?id='.$_SESSION['id']);
-   }
-}
 
 ?>
 
@@ -59,23 +56,27 @@ if(isset($_SESSION['id']))
         <h2> Edition de Profil</h2>
         <div align="left">
             <form method="POST" action="">
-                <label>Pseudo :</label>
-                <input type="text" name="newpseudo" placeholder="Pseudo"value=<?php echo $user['pseudo'];?>/><br/><br/>
-                <label>Mail :</label>
-                <input type="email" name="newmail" placeholder="Mail"value=<?php echo $user['mail'];?>/><br/><br/>
+                <label> Pseudo :</label>
+                <input type="text" name="newpseudo" placeholder="Pseudo" value="<?php echo $user['pseudo'];?>" /> <br/><br/>
+                <label> Mail :</label>
+                <input type="email" name="newmail" placeholder="Mail" value="<?php echo $user['mail'];?>" /> <br/><br/>
                 <label>Mot de passe :</label>
-                <input type="password" name="newmdp1" placeholder="Mot de passe"value=<?php echo $user['motdepasse'];?>/><br/><br/>
+                <input type="password" name="newmdp1" placeholder="Mot de passe"/><br/><br/>
                 <label>Confirmer le mot de passe :</label>
                 <input type="password" name="newmdp2" placeholder="Confirmation du mot de passe" /><br/><br/>
                 <input type="submit" value="Mettre à jour son profil"/>
-            </div>
-        </form>
-        <?php if(isset($msg)){echo $msg;} ?>
+            
+            </form>
+            <?php if(isset($msg)){echo $msg;} ?>
+        </div>
     </div>
     
     
     </body>
 </html>
 <?php
-
+} 
+else{
+    header("Location: connexionessay.php");
+}
 ?>
