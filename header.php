@@ -1,4 +1,4 @@
-edouard
+
         <meta charset="iso-8859-1">
         <title>PINEAPPLE</title>
         <link rel="stylesheet" href="stylesheet.css">
@@ -29,7 +29,7 @@ edouard
                
                 <div class="menuCategory">
 
-                    <form method = "get" action = "index.php?page=search">
+                    <form method = "get" action = "search.php">
 
                         <span class="navtitle">Produit</span>
 
@@ -54,13 +54,6 @@ edouard
                 </div>
 
 
-                
-
-                    
-
-                
-
-
             </div>
 
 
@@ -72,7 +65,7 @@ edouard
 
                 <a href="index.php?page=logUp" class="menu">Profil</a>
 
-                <a href="index.php?page=logUp." class="menu">Deconnexion</a>
+                <a href="index.php?page=logUp" class="menu">Deconnexion</a>
 
                 <a href = "index.php?page=cart"><img class="logoCart" src="images/panier.png"></a>');
 
@@ -121,7 +114,7 @@ edouard
                
                 <div class="menuCategory">
 
-                    <form method = "get" action = "index.php?page=search">
+                    <form method = "get" action = "search.php">
 
                         <span class="navtitle">Produit</span>
 
@@ -198,7 +191,7 @@ edouard
                
                 <div class="menuCategory">
 
-                    <form method = "get" action = "index.php?page=search">
+                    <form method = "get" action = "search.php">
 
                         <span class="navtitle">Produit</span>
 
@@ -273,7 +266,7 @@ edouard
                
                 <div class="menuCategory">
 
-                    <form method = "get" action = "index.php?page=search">
+                    <form method = "get" action = "search.php">
 
                         <span class="navtitle">Produit</span>
 
