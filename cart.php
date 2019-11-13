@@ -15,7 +15,7 @@
 
             $done = true;
 
-            $cartTable = $bdd->query("SELECT * FROM `cart`");            
+            $cartTable = $bdd->query("SELECT * FROM `cart` WHERE `id` = " . $_SESSION['id']."");            
 
             $i = 0;
 
@@ -57,7 +57,9 @@
 
 }
 
-    $cartTable = $bdd->query("SELECT * FROM `cart`");
+if(isset($_SESSION['id'])){
+
+    $cartTable = $bdd->query("SELECT * FROM `cart` WHERE `id` = " . $_SESSION['id']."");
 
     $done = false;
 
@@ -133,6 +135,15 @@
         echo("Votre panier est vide !");
     }
 
+}
+
+    else{
+
+
+        echo("Connectez vous pour afficher votre panier !");
+
+
+    }
 
     ?>
 
