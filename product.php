@@ -38,10 +38,10 @@
 
                 }
             
-                $req = $bdd->prepare('INSERT INTO cart(produit, quantite) VALUES(?,?)');
+                $req = $bdd->prepare('INSERT INTO cart(produit, quantite, id) VALUES(?,?,?)');
 
 
-                $req->execute(array($_GET['product'], $_POST['quantite'] + $quantitePrecedante));
+                $req->execute(array($_GET['product'], $_POST['quantite'] + $quantitePrecedante, $_SESSION['id']));
 
 
             }
