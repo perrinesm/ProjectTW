@@ -41,9 +41,9 @@
 
                 $suppr = $bdd->query("DELETE FROM `cart` WHERE `produit` = '" . $cartLine['produit']."'");
 
-                $req = $bdd->prepare('INSERT INTO cart(produit, quantite) VALUES(?,?)');
+                $req = $bdd->prepare('INSERT INTO cart(produit, quantite, id) VALUES(?,?,?)');
 
-                $req->execute(array($cartLine['produit'], $cartLine['quantite'] - $_POST['quantiteSuppr']));
+                $req->execute(array($cartLine['produit'], $cartLine['quantite'] - $_POST['quantiteSuppr'], $_SESSION['id']));
 
             }
 

@@ -24,7 +24,7 @@
 
 
             
-            if(isset($_POST['quantite'])){
+            if(isset($_POST['quantite']) AND isset($_SESSION['id'])){
 
                 $cartTable = $bdd->query("SELECT * FROM `cart` WHERE `produit` = " . $productName."");
 
@@ -90,26 +90,57 @@
                     <td align="left" width="10%"><p><strong> Prix  </strong><br > <?php echo($productLine['prix'])?> </p></td>
                     <td align="right" width="30%"><p> 
 
+                    <?php
 
-                    <form method="post" action = '<?php echo('index.php?page=product&amp;product='.$productLine['produit'].'')?>'>
+                    if (isset($_SESSION['id'])){
 
-                        <select name="quantite" id="quantite" class="button">
-                            <option value="error">Quantite</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
+
+         echo("<form method='post' action = '')?>'>
+
+                        <select name='quantite' id='quantite' class='button'>
+                            <option value='error'>Quantite</option>
+                            <option value='1'>1</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                            <option value='5'>5</option>
+                            <option value='6'>6</option>
+                            <option value='7'>7</option>
+                            <option value='8'>8</option>
                         </select>
 
-                        <input type="submit" class="button" value=" Ajouter au Panier" onclick="alert('Element(s) ajouté(s) au panier !')" />
+                        <input type='submit' class='button' value=' Ajouter au Panier' onclick='alert('Element(s) ajouté(s) au panier !')'/>
 
-                    </form>
+                    </form>");
+
+                }
+
+                else{
+
+                echo("<form method='post' action = ''>
+
+                        <select name='quantite' id='quantite' class='button'>
+                            <option value='error'>Quantite</option>
+                            <option value='1'>1</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                            <option value='5'>5</option>
+                            <option value='6'>6</option>
+                            <option value='7'>7</option>
+                            <option value='8'>8</option>
+                        </select>
+
+                        <input type='submit' class='button' value=' Ajouter au Panier' onclick='alert(\"Connectez vous pour ajouter des éléments à votre panier !\")' />
+
+                    </form>");
+
+                }
 
 
+                
+
+?>
 
                     </p></td>
                 </tr></tbody>
