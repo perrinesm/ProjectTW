@@ -33,13 +33,13 @@
 
             if($cartLine['quantite'] - $_POST['quantiteSuppr'] < 1){            
 
-                $suppr = $bdd->query("DELETE FROM `cart` WHERE `produit` = '". $cartLine['produit']."'");
+                $suppr = $bdd->query("DELETE FROM `cart` WHERE `produit` = '". $cartLine['produit']."' AND `id` = ".$_SESSION['id']."");
 
             }
 
             else{
 
-                $suppr = $bdd->query("DELETE FROM `cart` WHERE `produit` = '" . $cartLine['produit']."'");
+                $suppr = $bdd->query("DELETE FROM `cart` WHERE `produit` = '" . $cartLine['produit']."'AND `id` = ".$_SESSION['id']."");
 
                 $req = $bdd->prepare('INSERT INTO cart(produit, quantite, id) VALUES(?,?,?)');
 

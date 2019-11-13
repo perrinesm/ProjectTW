@@ -26,7 +26,7 @@
             
             if(isset($_POST['quantite']) AND isset($_SESSION['id'])){
 
-                $cartTable = $bdd->query("SELECT * FROM `cart` WHERE `produit` = " . $productName."");
+                $cartTable = $bdd->query("SELECT * FROM `cart` WHERE `produit` = " . $productName." AND `id` = ".$_SESSION['id']."");
 
                 $quantitePrecedante = 0;
 
@@ -34,7 +34,7 @@
 
                     $quantitePrecedante = $cartLine['quantite'] + $quantitePrecedante;
 
-                    $suppr = $bdd->query("DELETE FROM `cart` WHERE `produit` = " . $productName."");
+                    $suppr = $bdd->query("DELETE FROM `cart` WHERE `produit` = " . $productName." AND `id` = ".$_SESSION['id']."");
 
                 }
             
