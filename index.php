@@ -34,7 +34,7 @@ $page="index";
 
 </header>
 
-<body>
+<body background="images/fond.jpg">
 	<?php
 	
 	if(!($page==="index")){
@@ -54,7 +54,6 @@ $page="index";
 	}
 	?>
 </body>
-
 
 
 <footer>

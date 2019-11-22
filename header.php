@@ -3,7 +3,7 @@
         <title>PINEAPPLE</title>
         <link rel="stylesheet" href="stylesheet.css">
 
-    <div ID="headerID">
+    <div style="background-color: khaki;"  ID="headerID">
 
 
         

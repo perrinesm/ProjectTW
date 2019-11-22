@@ -3,7 +3,7 @@
 <html>
     
     <body>
-    <div align="center">     
+    <div style="background-color: khaki" align="center">     
         <h2> Profil de <?php echo $_SESSION['pseudo'];?></h2>
         <br /><br />
         Pseudo = <?php echo $_SESSION['pseudo'];?>

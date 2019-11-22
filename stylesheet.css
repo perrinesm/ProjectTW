@@ -1,7 +1,7 @@
 *{
 margin:0;
 padding:0;
-background-color: khaki;
+/*background-color: khaki;*/
 
 }
 
@@ -38,7 +38,7 @@ img {
 
 .product
 {
-    
+    background-color: khaki;
     border-width:2px;
     border-bottom: 5px;
     border-left : 2px;
@@ -52,12 +52,15 @@ img {
     border-color: rgb(83, 135, 88);
 }
 .inscription{
+    background-color: khaki;
     border-width:2px;
     border-bottom: 5px;
     border-left : 2px;
     border-right: 2px;
     border-style: solid;
     clear : both;
+    height: 90%;
+    padding-top: 30px;
     margin-left: 30px;
     padding-left: 30px;
     margin : 0 auto;
@@ -204,7 +207,7 @@ font-style: bold;
 h1{
 	margin-top: 50px;
 	font-size: 50px;
-	color:rgb(83,135,88);
+	color:rgb(244, 39, 20);
 }
 
 
@@ -248,9 +251,8 @@ nav a:hover, nav span:hover{
 
 
 .footer {
-    background:khaki;
     height: 250px;
-    padding-top: 200px;
+    padding-top: 400px;
     font-size: 25px;
     line-height: 25px;
     
@@ -259,9 +261,10 @@ nav a:hover, nav span:hover{
 
 
 .footer .footer-content {
+    background-color: khaki;
     border : 2px solid darkslategray;
     display : flex;
-    height: 286px;
+    height: 450px;
     font-size: 25px;
 
 }

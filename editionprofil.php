@@ -50,7 +50,7 @@ if(isset($_SESSION['id']))
     </head>
 
     <body>
-    <div align="center">     
+    <div style="background-color: khaki; border-width:2px; border-color: rgb(83, 135, 88)" align="center">     
         <h2> Edition de Profil</h2>
         <div align="left">
             <form method="POST" action="">
