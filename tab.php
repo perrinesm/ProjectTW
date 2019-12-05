@@ -1,59 +1,46 @@
-
-   
-
-
-
-    <body  style = "display: flex; flex-direction: column;">
+<body  style = "display: flex; flex-direction: column;">
         
 
 
-        <?php
+    <?php
 
-            $productType = "'".$_GET['productType']."'"; 
+        $productType = "'".$_GET['productType']."'"; 
 
-            $type = "";      
+        $type = "";      
 
-            switch ($productType) {
+        switch ($productType) {
 
-                                case "'telephone'":
-                                  $type = "Téléphones";
-                                  break;
+                            case "'telephone'":
+                                $type = "Téléphones";
+                            break;
 
-                                case "'tablette'":
-                                  $type = "Tablettes";
-                                  break;
+                            case "'tablette'":
+                                $type = "Tablettes";
+                            break;
                               
-                                case "'ordinateur'":
-                                  $type = "Ordinateurs";
-                                  break;
+                            case "'ordinateur'":
+                                $type = "Ordinateurs";
+                            break;
 
-                                case "'accessoire'":
-                                  $type = "Accessoires";
-                                  break;
+                            case "'accessoire'":
+                                $type = "Accessoires";
+                            break;
 
                           }              
 
-            echo("<h2 style='margin-left: 90px;'>".$type."</h2>");
+        echo("<h2 style='margin-left: 90px;'>".$type."</h2>");
 
-            $tabTable = $bdd->query("SELECT * FROM `tableproduit` WHERE `type` = ".$productType."");
+        $tabTable = $bdd->query("SELECT * FROM `tableproduit` WHERE `type` = ".$productType."");         
 
-            
-
-
-            
-        while ($productLine = $tabTable->fetch()) {
-            
+        while ($productLine = $tabTable->fetch()) {           
         
-
             $produit = $productLine['produit'];
 
             $description = $productLine['description'];
 
             $prix = $productLine['prix'];
 
-
             echo("
-
 
                 <div class = 'product'>  
                     <style>
@@ -75,11 +62,10 @@
                     </table>
                 </div>
 
-
                 ");
 
         }
 
         ?>
 
-    </body>
+</body>

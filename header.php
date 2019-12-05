@@ -1,27 +1,21 @@
+<meta charset="iso-8859-1">
 
-        <meta charset="iso-8859-1">
-        <title>PINEAPPLE</title>
-        <link rel="stylesheet" href="stylesheet.css">
+<title>PINEAPPLE</title>
 
-    <div style="background-color: khaki;"  ID="headerID">
+<link rel="stylesheet" href="stylesheet.css">
 
+<div style="background-color: khaki;" id = "headerID">        
 
-        
-
-            <?php
-
-       
+    <?php       
 
         if(isset($_SESSION['id'])){
 
             echo('
-            <div id="logoNom">
+
+        <div id="logoNom">
             <a href = "index.php" class = "titre">PINEAPPLE</a>
-            <img src="images/logo.png" class = "logo"> 
-            
+            <img src="images/logo.png" class = "logo">             
         </div>
-
-
        
         <div id="bande">   
 
@@ -38,12 +32,9 @@
                             <a href = "index.php?page=tab&amp;productType=telephone" class = "menu">Téléphones</a><br/>
                             <a href = "index.php?page=tab&amp;productType=tablette" class = "menu">Tablettes</a><br/>
                             <a href = "index.php?page=tab&amp;productType=ordinateur" class = "menu">Ordinateurs</a><br/>
-                            <a href = "index.php?page=tab&amp;productType=accessoire" class = "menu">Accessoires</a>       
+                            <a href = "index.php?page=tab&amp;productType=accessoire" class = "menu">Accessoires</a>    
 
-
-                        </div>
-
-                                               
+                        </div>                                               
 
                         <meta><input type="search" name="bar" id="bar" placeholder="Recherche..." /></meta>
 
@@ -55,21 +46,19 @@
 
                 </div>
 
-
             </div>
-
 
                 <div id="bandeDroite">
 
-                <form method="POST" action=" "> 
+                    <form method="POST" action=" ">                     
 
-                    
+                        <a href="index.php?page=profil" class="menu">Profil</a>
 
-                <a href="index.php?page=profil" class="menu">Profil</a>
+                        <a href="index.php?page=deconnexion" class="menu">Deconnexion</a>
 
-                <a href="index.php?page=deconnexion" class="menu">Deconnexion</a>
+                        <a href = "index.php?page=cart"><img class="logoCart" src="images/panier.png"></a>
 
-                <a href = "index.php?page=cart"><img class="logoCart" src="images/panier.png"></a>');
+                ');
 
         }
 
@@ -77,8 +66,9 @@
 
             if(isset($_POST['formconnect'])){
 
-                $mailconnect = htmlspecialchars($_POST['mailconnect']);
+                $mailconnect = htmlspecialchars($_POST['mailconnect']);                
                 $mdpconnect = sha1($_POST['mdpconnect']);
+
                 if(!empty($mailconnect) AND !empty($mdpconnect)){
 
                     $requser = $bdd -> prepare("SELECT * FROM membres WHERE mail = ? AND motdepasse= ?" );
@@ -102,74 +92,63 @@
 
                         echo('
 
-                            <div id="logoNom">
-            <a href = "index.php" class = "titre">PINEAPPLE</a>
-            <img src="images/logo.png" class = "logo"> 
-            
-        </div>
+                            <div id="logoNom">                            
+                                <a href = "index.php" class = "titre">PINEAPPLE</a>
+                                <img src="images/logo.png" class = "logo">                                 
+                            </div>
+                           
+                            <div id="bande">   
 
+                                <div id="bandeGauche">
+                                   
+                                    <div class="menuCategory">
 
-       
-        <div id="bande">   
+                                        <form method = "get" action = "index.php?page=search.php">
 
-            <div id="bandeGauche">
-               
-                <div class="menuCategory">
+                                            <span class="navtitle">Produit</span>
 
-                    <form method = "get" action = "index.php?page=search.php">
+                                            <div class="withSeveralLinks">
+                                        
+                                                <a href = "index.php?page=tab&amp;productType=telephone" class = "menu">Téléphones</a><br/>
+                                                <a href = "index.php?page=tab&amp;productType=tablette" class = "menu">Tablettes</a><br/>
+                                                <a href = "index.php?page=tab&amp;productType=ordinateur" class = "menu">Ordinateurs</a><br/>
+                                                <a href = "index.php?page=tab&amp;productType=accessoire" class = "menu">Accessoires</a>     
 
-                        <span class="navtitle">Produit</span>
+                                            </div>                                                                   
 
-                        <div class="withSeveralLinks">
-                    
-                            <a href = "index.php?page=tab&amp;productType=telephone" class = "menu">Téléphones</a><br/>
-                            <a href = "index.php?page=tab&amp;productType=tablette" class = "menu">Tablettes</a><br/>
-                            <a href = "index.php?page=tab&amp;productType=ordinateur" class = "menu">Ordinateurs</a><br/>
-                            <a href = "index.php?page=tab&amp;productType=accessoire" class = "menu">Accessoires</a>       
+                                            <meta><input type="search" name="bar" id="bar" placeholder="Recherche..." /></meta>
 
+                                            <meta class="menu"><input type="submit" value="Valider"/></meta>
 
-                        </div>
+                                            <input type = "hidden" name ="page" id = "page" value="search"/>
 
-                                               
+                                        </form>
 
-                        <meta><input type="search" name="bar" id="bar" placeholder="Recherche..." /></meta>
+                                    </div>                               
 
-                        <meta class="menu"><input type="submit" value="Valider"/></meta>
+                                </div>
 
-                        <input type = "hidden" name ="page" id = "page" value="search"/>
+                                <div id="bandeDroite">
 
-                    </form>
+                                    <form method="POST" action=" "> 
 
-                </div>
+                                        <meta class="menu">E-Mail :</meta>
 
+                                        <meta class="menu"><input type="text" name="mailconnect" id="ID" /></meta>
 
-                
+                                        <meta class="menu">Password :</meta>
 
-                    
+                                        <meta class="menu"><input type="password" name="mdpconnect" id="PW" ></meta>
 
-                
+                                        <meta class="menu"><input type="submit" class="Bouton" name="formconnect" value="OK"/></meta>
 
+                                        <font color="red" > '.$erreur.'</font>
 
-            </div>
+                                        <a href="index.php?page=logUp" class="menu">Inscription</a>
 
-                            <div id="bandeDroite">
+                                        <a href = "index.php?page=cart"><img class="logoCart" src="images/panier.png"></a>
 
-                <form method="POST" action=" "> 
-
-                <meta class="menu">E-Mail :</meta>
-
-                <meta class="menu"><input type="text" name="mailconnect" id="ID" /></meta>
-
-                <meta class="menu">Password :</meta>
-
-                <meta class="menu"><input type="password" name="mdpconnect" id="PW" ></meta>
-
-                <meta class="menu"><input type="submit" class="Bouton" name="formconnect" value="OK"/></meta>
-
-                <font color="red" > '.$erreur.'</font>
-                <a href="index.php?page=logUp" class="menu">Inscription</a>
-
-                <a href = "index.php?page=cart"><img class="logoCart" src="images/panier.png"></a>');
+                                        ');
 
                     }
 
@@ -182,54 +161,106 @@
                     echo('
 
                         <div id="logoNom">
-            <a href = "index.php" class = "titre">PINEAPPLE</a>
-            <img src="images/logo.png" class = "logo"> 
-            
-        </div>
+                            <a href = "index.php" class = "titre">PINEAPPLE</a>
+                            <img src="images/logo.png" class = "logo">                             
+                        </div>
+                       
+                        <div id="bande">   
+
+                            <div id="bandeGauche">
+                               
+                                <div class="menuCategory">
+
+                                    <form method = "get" action = "index.php?page=search.php">
+
+                                        <span class="navtitle">Produit</span>
+
+                                        <div class="withSeveralLinks">
+                                    
+                                            <a href = "index.php?page=tab&amp;productType=telephone" class = "menu">Téléphones</a><br/>
+                                            <a href = "index.php?page=tab&amp;productType=tablette" class = "menu">Tablettes</a><br/>
+                                            <a href = "index.php?page=tab&amp;productType=ordinateur" class = "menu">Ordinateurs</a><br/>
+                                            <a href = "index.php?page=tab&amp;productType=accessoire" class = "menu">Accessoires</a>       
+
+                                        </div>                                                               
+
+                                        <meta><input type="search" name="bar" id="bar" placeholder="Recherche..." /></meta>
+
+                                        <meta class="menu"><input type="submit" value="Valider"/></meta>
+
+                                        <input type = "hidden" name ="page" id = "page" value="search"/>
+
+                                    </form>
+
+                                </div>     
+
+                            </div>
+
+                            <div id="bandeDroite">
+
+                                <form method="POST" action=" "> 
+
+                                    <meta class="menu">E-Mail :</meta>
+
+                                    <meta class="menu"><input type="text" name="mailconnect" id="ID" /></meta>
+
+                                    <meta class="menu">Password :</meta>
+
+                                    <meta class="menu"><input type="password" name="mdpconnect" id="PW" ></meta>
+
+                                    <meta class="menu"><input type="submit" class="Bouton" name="formconnect" value="OK"/></meta>
+
+                                    <font color="red" > '.$erreur.'</font>
+
+                                    <a href="index.php?page=logUp" class="menu">Inscription</a>
+
+                                    <a href = "index.php?page=cart"><img class="logoCart" src="images/panier.png"></a>');
+
+                    }
+
+            }
+
+            else{
 
 
-       
-        <div id="bande">   
+                echo('
 
-            <div id="bandeGauche">
-               
-                <div class="menuCategory">
+                    <div id="logoNom">
+                        <a href = "index.php" class = "titre">PINEAPPLE</a>
+                        <img src="images/logo.png" class = "logo">                        
+                    </div>
+                   
+                    <div id="bande">   
 
-                    <form method = "get" action = "index.php?page=search.php">
+                        <div id="bandeGauche">
+                           
+                            <div class="menuCategory">
 
-                        <span class="navtitle">Produit</span>
+                                <form method = "get" action = "index.php?page=search.php">
 
-                        <div class="withSeveralLinks">
-                    
-                            <a href = "index.php?page=tab&amp;productType=telephone" class = "menu">Téléphones</a><br/>
-                            <a href = "index.php?page=tab&amp;productType=tablette" class = "menu">Tablettes</a><br/>
-                            <a href = "index.php?page=tab&amp;productType=ordinateur" class = "menu">Ordinateurs</a><br/>
-                            <a href = "index.php?page=tab&amp;productType=accessoire" class = "menu">Accessoires</a>       
+                                    <span class="navtitle">Produit</span>
 
+                                    <div class="withSeveralLinks">
+                                
+                                        <a href = "index.php?page=tab&amp;productType=telephone" class = "menu">Téléphones</a><br/>
+                                        <a href = "index.php?page=tab&amp;productType=tablette" class = "menu">Tablettes</a><br/>
+                                        <a href = "index.php?page=tab&amp;productType=ordinateur" class = "menu">Ordinateurs</a><br/>
+                                        <a href = "index.php?page=tab&amp;productType=accessoire" class = "menu">Accessoires</a>       
+
+
+                                    </div>                                                           
+
+                                    <meta><input type="search" name="bar" id="bar" placeholder="Recherche..." /></meta>
+
+                                    <meta class="menu"><input type="submit" value="Valider"/></meta>
+
+                                    <input type = "hidden" name ="page" id = "page" value="search"/>
+
+                                </form>
+
+                            </div>                          
 
                         </div>
-
-                                               
-
-                        <meta><input type="search" name="bar" id="bar" placeholder="Recherche..." /></meta>
-
-                        <meta class="menu"><input type="submit" value="Valider"/></meta>
-
-                        <input type = "hidden" name ="page" id = "page" value="search"/>
-
-                    </form>
-
-                </div>
-
-
-                
-
-                    
-
-                
-
-
-            </div>
 
                         <div id="bandeDroite">
 
@@ -245,110 +276,22 @@
 
                                 <meta class="menu"><input type="submit" class="Bouton" name="formconnect" value="OK"/></meta>
 
-                                <font color="red" > '.$erreur.'</font>
-
                                 <a href="index.php?page=logUp" class="menu">Inscription</a>
 
-                                <a href = "index.php?page=cart"><img class="logoCart" src="images/panier.png"></a>');
+                                <a href = "index.php?page=cart"><img class="logoCart" src="images/panier.png"></a>
 
-                    }
-
-            }
-
-            else{
-
-
-                echo('<div id="logoNom">
-            <a href = "index.php" class = "titre">PINEAPPLE</a>
-            <img src="images/logo.png" class = "logo"> 
-            
-        </div>
-
-
-       
-        <div id="bande">   
-
-            <div id="bandeGauche">
-               
-                <div class="menuCategory">
-
-                    <form method = "get" action = "index.php?page=search.php">
-
-                        <span class="navtitle">Produit</span>
-
-                        <div class="withSeveralLinks">
-                    
-                            <a href = "index.php?page=tab&amp;productType=telephone" class = "menu">Téléphones</a><br/>
-                            <a href = "index.php?page=tab&amp;productType=tablette" class = "menu">Tablettes</a><br/>
-                            <a href = "index.php?page=tab&amp;productType=ordinateur" class = "menu">Ordinateurs</a><br/>
-                            <a href = "index.php?page=tab&amp;productType=accessoire" class = "menu">Accessoires</a>       
-
-
-                        </div>
-
-                                               
-
-                        <meta><input type="search" name="bar" id="bar" placeholder="Recherche..." /></meta>
-
-                        <meta class="menu"><input type="submit" value="Valider"/></meta>
-
-                        <input type = "hidden" name ="page" id = "page" value="search"/>
-
-                    </form>
-
-                </div>
-
-
-                
-
-                    
-
-                
-
-
-            </div>
-
-
-                <div id="bandeDroite">
-
-                <form method="POST" action=" "> 
-
-                <meta class="menu">E-Mail :</meta>
-
-                <meta class="menu"><input type="text" name="mailconnect" id="ID" /></meta>
-
-                <meta class="menu">Password :</meta>
-
-                <meta class="menu"><input type="password" name="mdpconnect" id="PW" ></meta>
-
-                <meta class="menu"><input type="submit" class="Bouton" name="formconnect" value="OK"/></meta>
-
-                <a href="index.php?page=logUp" class="menu">Inscription</a>
-
-                <a href = "index.php?page=cart"><img class="logoCart" src="images/panier.png"></a>');
-
-
-
-
+                        ');
 
             }
 
         }
 
-
-?>
+    ?>
                 
-                </form>
+                            </form>
    
-            </div>
+                        </div>            
 
-
-            
-
-        </div>
-
+                    </div>
     
-    </div>
-
-        
-
+</div>

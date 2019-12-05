@@ -2,65 +2,68 @@
 
 <?php
 
-include "bdd.php";
+	include "bdd.php";
 
-session_start ();
+	session_start ();
 
-$page="index";
+	$page="index";
+
 	if(isset($_GET['page'])){
-		$page=$_GET['page'];
-				
-	}
-            
+
+			$page=$_GET['page'];
+
+		}           
 
 ?>
 
-<html>
-<div id = "all">
-<head>
-	<meta charset="utf-8" />
-    <link rel="stylesheet" href="stylesheet.css" />
-	<link rel="icon" type="image/png" href="icon.png" />
-    <title></title>
+<html id = "all">
+
+	<head>
+
+		<meta charset="utf-8" />
+    	<link rel="stylesheet" href="stylesheet.css" />
+		<link rel="icon" type="image/png" href="icon.png" />
+
+	</head>
+
+	<header>
 	
-</head>
+		<?php include "header.php";?>
 
+	</header>
 
+	<body background="images/fond.jpg">
 
-<header>
-	
-	<?php include "header.php";?>
-
-
-</header>
-
-<body background="images/fond.jpg">
-	<?php
-	
-	if(!($page==="index")){
+		<?php
 		
-		include "".$page.".php";
-		
-		
-	}
-	else{
-		echo("
-		<section>
-			<center>
-				<h1> Bienvenue ! </h1>
-			</center>
-		</section>
-	");
-	}
-	?>
-</body>
+			if(!($page==="index")){
+				
+				include "".$page.".php";		
+				
+			}
 
+			else{
 
-<footer>
+				echo("
+
+					<section>
+						<center>
+							<h1> Bienvenue ! </h1>
+						</center>
+					</section>
+
+				");
+
+			}
+
+		?>
+
+	</body>
+
+	<footer>
 	
-	<?php include "footer.php";?>
+		<?php include "footer.php";?>
 
-</footer>
+	</footer>
 
-</div>
 </html>
