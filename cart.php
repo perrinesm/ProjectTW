@@ -1,97 +1,79 @@
-<?php    
+<?php
 
-    $produitNum = 0;
+$produitNum = 0;
 
-    $done = false;
+$done = false;
 
-    if (isset($_POST['quantiteSuppr'])){
+if (isset($_POST['quantiteSuppr'])) {
 
-        while (!$done){
+    while (!$done) {
 
-            if(isset($_POST[$produitNum]) and $done == false){
+        if (isset($_POST[$produitNum]) and $done == false) {
 
-                    $done = true;
+            $done = true;
 
-                    $cartTable = $bdd->query("SELECT * FROM `cart` WHERE `id` = " . $_SESSION['id']."");            
+            $cartTable = $bdd->query("SELECT * FROM `cart` WHERE `id` = " . $_SESSION['id'] . "");
 
-                    $i = 0;
+            $i = 0;
 
-                    $cartLine = $cartTable->fetch();
+            $cartLine = $cartTable->fetch();
 
-                    while($i != $produitNum){
+            while ($i != $produitNum) {
 
-                        $cartLine = $cartTable->fetch();
+                $cartLine = $cartTable->fetch();
 
-                        $i =  $i + 1;
+                $i =  $i + 1;
+            }
 
-                    }
+            if ($cartLine['quantite'] - $_POST['quantiteSuppr'] < 1) {
 
-                    if($cartLine['quantite'] - $_POST['quantiteSuppr'] < 1){            
+                $suppr = $bdd->query("DELETE FROM `cart` WHERE `produit` = '" . $cartLine['produit'] . "' AND `id` = " . $_SESSION['id'] . "");
+            } else {
 
-                        $suppr = $bdd->query("DELETE FROM `cart` WHERE `produit` = '". $cartLine['produit']."' AND `id` = ".$_SESSION['id']."");
+                $suppr = $bdd->query("DELETE FROM `cart` WHERE `produit` = '" . $cartLine['produit'] . "'AND `id` = " . $_SESSION['id'] . "");
 
-                    }
+                $req = $bdd->prepare('INSERT INTO cart(produit, quantite, id) VALUES(?,?,?)');
 
-                    else{
+                $req->execute(array($cartLine['produit'], $cartLine['quantite'] - $_POST['quantiteSuppr'], $_SESSION['id']));
+            }
 
-                        $suppr = $bdd->query("DELETE FROM `cart` WHERE `produit` = '" . $cartLine['produit']."'AND `id` = ".$_SESSION['id']."");
-
-                        $req = $bdd->prepare('INSERT INTO cart(produit, quantite, id) VALUES(?,?,?)');
-
-                        $req->execute(array($cartLine['produit'], $cartLine['quantite'] - $_POST['quantiteSuppr'], $_SESSION['id']));
-
-                    }
-
-                    $done = true;
-
-                }
-
-                $produitNum = $produitNum + 1;
-
+            $done = true;
         }
 
+        $produitNum = $produitNum + 1;
+    }
 }
 
-    if(isset($_SESSION['id'])){
+if (isset($_SESSION['id'])) {
+    
+    $cartTable = $bdd->query("SELECT * FROM `cart` WHERE `id` = " . $_SESSION['id'] . "");
+    $done = false;
+    $vide = true;
+    $numSend = 0;
 
-        $cartTable = $bdd->query("SELECT * FROM `cart` WHERE `id` = " . $_SESSION['id']."");
+    while ($cartLine = $cartTable->fetch()) {
 
-        $done = false;
+        $vide = false;
+        $productTable = $bdd->query("SELECT * FROM `tableproduit` WHERE `produit` = '" . $cartLine['produit'] . "'");
+        $productLine = $productTable->fetch();
 
-        $vide = true;
-
-        $numSend = 0;
-
-        while($cartLine = $cartTable->fetch()){
-
-            $vide = false;
-
-            $productTable = $bdd->query("SELECT * FROM `tableproduit` WHERE `produit` = '".$cartLine['produit']."'");
-
-            $productLine = $productTable->fetch();        
-            
-
-                      
-
-            echo("
-
-    	       <div  class = 'product'>  
+        echo ("<div  class = 'product'>  
                     <style>
                         table{border-collapse:collapse;}  
                     </style>
                     <table width='100%''>
                         <thead><tr>
-                            <th align='left'><h4>".$productLine['produit']."</h4></th>
+                            <th align='left'><h4>" . $productLine['produit'] . "</h4></th>
                             <th align='left'><p class='description'><strong> Description </strong></p></th>
                             <th align='center'style='font-size:30px'><strong> Prix  </strong></th>
                             <th align='center'style='font-size:30px'><strong> Quantité  </strong></th>
                             
                         </tr></thead>
                         <tbody ><tr>
-                   	        <td width='15%'><p> <img src='images/".$productLine['image']."'/> </p></td>
-                            <td width='45%''><p class='description'>".$productLine['description']."</p></td>
-                            <td align='center' width='15%' style='font-size:30px'><p>".$productLine['prix']."</p></td>
-                            <td align='center' width='15%' style='font-size:30px'><p>".$cartLine['quantite']."</p></td>
+                   	        <td width='15%'><p> <img src='images/" . $productLine['image'] . "'/> </p></td>
+                            <td width='45%''><p class='description'>" . $productLine['description'] . "</p></td>
+                            <td align='center' width='15%' style='font-size:30px'><p>" . $productLine['prix'] . "</p></td>
+                            <td align='center' width='15%' style='font-size:30px'><p>" . $cartLine['quantite'] . "</p></td>
                             <td align='right' width='15%''><p>
 
                             <form action = 'index.php?page=cart' method = 'post'> 
@@ -108,41 +90,26 @@
                                     <option value='8'>8</option>
                                 </select>
 
-    					       <input class='button2' type='submit' name='".$numSend."' value='Supprimer' onclick='alert(\"Produit supprimé !\")''>	
+    					       <input class='button2' type='submit' name='" . $numSend . "' value='Supprimer' onclick='alert(\"Produit supprimé !\")''>	
 
                             </form>
-
                             </p></td>
                         </tr></tbody>
                     </table>
-                
                 </div>
-
-            ");      
-
-
-            $numSend = $numSend + 1;
-
-        }
-
-        if ($vide){
-
-            echo("Votre panier est vide !");
-        }
-
+            ");
+        $numSend = $numSend + 1;
     }
 
-    else{
-
-        echo("Connectez vous pour afficher votre panier !");
-
+    if ($vide) {
+        echo ("Votre panier est vide !");
     }
+} else {
+    echo ("Connectez vous pour afficher votre panier !");
+}
 
 ?>
 
-<a href = 'index.php' class = 'menu'style="text-align:center"><p><strong>Retour à l'accueil</strong></p></a>
-
-
-
-
-
+<a href='index.php' class='menu' style="text-align:center">
+    <p><strong>Retour à l'accueil</strong></p>
+</a>

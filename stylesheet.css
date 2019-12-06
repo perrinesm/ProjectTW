@@ -1,72 +1,65 @@
-*{
-margin:0;
-padding:0;
-/*background-color: khaki;*/
-
+* {
+    margin: 0;
+    padding: 0;
+    /*background-color: khaki;*/
 }
 
-a:link 
-{ 
-text-decoration:none; 
+a:link {
+    text-decoration: none;
 }
 
-
-body{
-
-	margin-bottom: 200px;
+body {
+    margin-bottom: 200px;
     font-family: fantasy;
     font-size: 30px;
 }
 
 
-#headerID
-{
-
-text-decoration: none;
-display: flex;
-flex-direction: column;
-padding-bottom: 10px;
-font-size: 30px;
-
+#headerID {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    font-size: 30px;
 }
 
 img {
-	width: 180px;
+    width: 180px;
     height: 180px;
     float: left;
 }
 
-.product
-{
+.product {
     background-color: khaki;
-    border-width:2px;
+    border-width: 2px;
     border-bottom: 5px;
-    border-left : 2px;
+    border-left: 2px;
     border-right: 2px;
     border-style: solid;
-    clear : both;
+    clear: both;
     margin-left: 10px;
     padding-left: 10px;
-    margin : 1em;
+    margin: 1em;
     padding-bottom: 10px;
     border-color: rgb(83, 135, 88);
 }
-.inscription{
+
+.inscription {
     background-color: khaki;
-    border-width:2px;
+    border-width: 2px;
     border-bottom: 5px;
-    border-left : 2px;
+    border-left: 2px;
     border-right: 2px;
     border-style: solid;
-    clear : both;
+    clear: both;
     height: 90%;
     padding-top: 30px;
     margin-left: 30px;
     padding-left: 30px;
-    margin : 0 auto;
+    margin: 0 auto;
     padding-bottom: 150px;
-    border-color: rgb(83, 135, 88);   
-    width:45%;
+    border-color: rgb(83, 135, 88);
+    width: 45%;
     height: 38%;
 }
 
@@ -76,138 +69,119 @@ h4 {
     font-size: 30px;
 }
 
-.description{
+.description {
     padding-left: 11%;
     font-size: 30px;
-    
-}
-
-
-
-
-
-
-
-#bande{
-
-display: flex;
-flex-direction: row;
 
 }
 
-.menuCart{
+#bande {
+    display: flex;
+    flex-direction: row;
+}
 
-font-size: 30px;
-float:right;
-position: relative;
-right: 20px;
+.menuCart {
+    font-size: 30px;
+    float: right;
+    position: relative;
+    right: 20px;
+}
+
+.menu {
+    font-size: 30px;
+    font-family: fantasy;
+    color: black;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+#bandeDroite {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.logoCart {
+    width: 45px;
+    height: 45px;
+    float: right;
+    position: relative;
 
 }
 
-.menu{
-
-font-size: 30px;
-font-family: fantasy;
-color:black;
-margin-left: 0.5em;
-margin-right: 0.5em;
-
-
-
-}
-
-#bandeDroite{
-
-
-position: absolute;
-right:0;
-display: flex;
-flex-direction: row;
-
-
-}
-
-.logoCart{
-width:45px;
-height:45px;
-float:right;
-position: relative;
-
-}
-
-.button{
-    background-color: rgb(83, 135, 88); 
-    float:center;
+.button {
+    background-color: rgb(83, 135, 88);
+    float: center;
     height: 80px;
-    width:200px;
+    width: 200px;
     position: relative;
     right: 50px;
     font-size: 30px;
     font-family: fantasy;
 }
-.button2{
-    background-color: rgb(233, 103, 103); 
-    float:center;
+
+.button2 {
+    background-color: rgb(233, 103, 103);
+    float: center;
     height: 80px;
-    width:200px;
+    width: 200px;
     position: relative;
     right: 50px;
     font-size: 30px;
     font-family: fantasy;
 }
-.buttonInscrip{
-    background-color: rgb(83, 135, 88); 
+
+.buttonInscrip {
+    background-color: rgb(83, 135, 88);
     height: 100px;
-    width:200px;
+    width: 200px;
     font-size: 30px;
     font-family: fantasy;
 }
 
-#logoNom
-{
+#logoNom {
 
-display: flex;
-flex-direction: row;
-justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
 }
 
-.logo{
+.logo {
     margin-left: 1px;
     margin-top: 30px;
-	width: 85px;
-	height: 85px;
-	padding-top: -10px;
+    width: 85px;
+    height: 85px;
+    padding-top: -10px;
 }
 
-.titre
-{
+.titre {
 
-padding-bottom: 10px;
-padding-top: 5px;
-color:rgb(244, 154, 20);
-font-size: 100px;
-text-align: center;
-font-family: fantasy;
-font-style: bold;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    color: rgb(244, 154, 20);
+    font-size: 100px;
+    text-align: center;
+    font-family: fantasy;
+    font-style: bold;
 
-}
-
-
-.contact
-{
-	font-size: 1em;
-	font-family: Arial;
-	color:black;	
-	text-align: center;
-	font-style: bold;
 }
 
 
-h1{
-	margin-top: 50px;
-	font-size: 50px;
-	color:rgb(244, 39, 20);
+.contact {
+    font-size: 1em;
+    font-family: Arial;
+    color: black;
+    text-align: center;
+    font-style: bold;
+}
+
+
+h1 {
+    margin-top: 50px;
+    font-size: 50px;
+    color: rgb(244, 39, 20);
 }
 
 
@@ -215,33 +189,36 @@ nav {
     text-align: left;
     background-color: khaki;
 }
-nav a, nav span{
-    color:black;
+
+nav a,
+nav span {
+    color: black;
     text-decoration: none;
-    transition:color linear 0.2s;
+    transition: color linear 0.2s;
 }
 
-nav a:hover, nav span:hover{
+nav a:hover,
+nav span:hover {
     color: khaki;
 }
 
 .menuCategory {
     display: inline-block;
-    position:relative;
-    padding:5px 10px;
-    
+    position: relative;
+    padding: 5px 10px;
+
 
 }
 
 .withSeveralLinks {
-    display: none; 
-    position:absolute;   
-    left:-0px;
-    top:100%;
+    display: none;
+    position: absolute;
+    left: -0px;
+    top: 100%;
     background-color: khaki;
-    padding:5px 15px;
+    padding: 5px 15px;
     font-size: 30px;
-    
+
 
 }
 
@@ -251,29 +228,23 @@ nav a:hover, nav span:hover{
 
 
 .footer {
-    height: 250px;
-    padding-top: 400px;
-    font-size: 25px;
-    line-height: 25px;
-    
-
+    height: 5vh;
+    padding-top: 20px;
+    font-size: 10px;
+    line-height: 12px;
 }
 
 
 .footer .footer-content {
     background-color: khaki;
-    border : 2px solid darkslategray;
-    display : flex;
+    border: 2px solid darkslategray;
+    display: flex;
     height: 450px;
     font-size: 25px;
 
 }
 
 .footer .footer-content .footer-section {
-    flex : 1;
+    flex: 1;
     font-size: 25px;
-    }
-
-
-
-
+}
