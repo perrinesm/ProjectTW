@@ -25,7 +25,7 @@ if (isset($_POST['forminscription'])) {
               $insertmbr->execute(array($pseudo, $mail, $mdp));
               $erreur = "Compte créé";
               
-              header("Location: index.php");
+              header("Location: index.php?page=logUpOk");
               /** remplacer par $erreur si bug /$_SESSION['comptecree']header('Location: index.php'); */
             } else {
               $erreur = "Mots de passe différents";

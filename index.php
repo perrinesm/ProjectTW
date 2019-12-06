@@ -28,16 +28,27 @@ if (isset($_GET['page'])) {
 <body background="images/fond.jpg">
 	<?php
 
-	if (!($page === "index")) {
-		include "" . $page . ".php";
-	} else {
+	if ($page === "logUpOk") {
 		echo ("
-				<section>
-					<center>
-						<h1> Bienvenue ! </h1>
-					</center>
-				</section>
-				");
+					<section>
+						<center>
+							<h1> Votre compte est créé vous pouvez vous connecter ! </h1>
+						</center>
+					</section>
+					");
+	}
+	else{
+		if (!($page === "index")) {
+			include "" . $page . ".php";
+		} else {
+			echo ("
+					<section>
+						<center>
+							<h1> Bienvenue ! </h1>
+						</center>
+					</section>
+					");
+		}
 	}
 	?>
 
